@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Splash Screen Fun Physical Activity</title>
+<style>
+/* --- Variabel & Global Styles --- */
+:root{
+  --bg1:#a8edea;
+  --bg2:#fed6e3;
+  --card:rgba(255,255,255,0.94);
+  --accent:#6ec6d9;
+  --text:#173737;
+  --anim:320ms;
+}
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:"Poppins", "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition: opacity 0.5s ease;
+  overflow: hidden; 
+}
+
+/* --- Dialog Musik (Modal) --- */
+.music-dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 200; /* Di atas splash screen (z-index: 100) */
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 300ms ease;
+}
+.music-dialog.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.dialog-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+}
+.music-btn {
+    background: linear-gradient(180deg, var(--accent), #56a5bb);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 150ms ease;
+    margin-top: 15px;
+}
+.music-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* --- Splash Screen Styles --- */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: opacity 1s ease, visibility 1s ease;
+    background: linear-gradient(135deg, var(--bg1), var(--bg2));
+    overflow: hidden;
+}
+.splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.canvas-bg{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+}
+.header-center{
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    padding: 20px;
+    max-width: 90%; 
+    text-align: center;
+}
+.logo-wrap{width:140px;height:140px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.7));box-shadow:0 12px 26px rgba(0,0,0,0.06);transform-origin:center;}
+.title{margin:0;font-size:28px;color:#174b4b; margin-top: 16px; font-weight: 700;}
+.subtitle{margin:0;color:#4e7b7b;font-size:16px}
+.content {
+    opacity: 0;
+    transition: opacity 0.5s ease 1s;
+    text-align: center;
+}
+.content.show {
+    opacity: 1;
+}
+
+.logo-svg {
+    width: 100%;
+    height: 100%;
+}
+</style>
+</head>
+<body>
+
+  <div id="musicDialog" class="music-dialog">
+      <div class="dialog-card">
+          <p style="font-size:18px; font-weight:700; margin-bottom: 0;">Selamat Datang! 👋</p>
+          <p style="color: #577070;">Aplikasi ini memiliki musik latar. Apakah Anda ingin memutarnya sekarang?</p>
+          <button id="playMusicBtn" class="music-btn">🎧 Putar Musik & Lanjutkan</button>
+      </div>
+  </div>
+  
+  <div id="splashScreen" class="splash-screen" role="status" aria-label="Memuat aplikasi">
+    <canvas id="bgCanvas" class="canvas-bg"></canvas>
+
+    <div class="header-center">
+      <div id="logoWrap" class="logo-wrap">
+        <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ikon anak berlari">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#9feee9"/>
+              <stop offset="1" stop-color="#ffd1e0"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.7"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0.3"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="56" fill="url(#g1)"/>
+          <g transform="translate(12,8) scale(0.72)">
+            <path d="M62 26c-3 0-6 3-6 6 0 3 1 6 4 8 2 1 6 3 11 6 6 3 10 9 12 15 1 4 0 9-3 12l-8-4c2-3 2-6 1-9-1-4-4-7-8-9-4-2-8-3-12-5-4-2-8-5-10-9-2-3-2-7 1-10 2-2 6-3 9-2 3 0 6 1 9 1l-5 5z" fill="#fff"/>
+            <circle cx="26" cy="22" r="10" fill="#fff"/>
+            <path d="M36 76c6-6 12-12 18-16 5-3 10-7 12-12l8 3c-1 7-6 12-11 16-6 4-13 8-20 12l-7-3z" fill="#fff"/>
+          </g>
+          <circle cx="60" cy="60" r="56" fill="url(#g2)" opacity="0.18"/>
+        </svg>
+      </div>
+      <h1 class="title">Fun Physical Activity</h1>
+      <div class="subtitle">Memuat konten...</div>
+    </div>
+  </div>
+  
+  <div id="mainContent" class="content">
+    <h2 style="color: var(--text);">Selamat Datang di Aplikasi!</h2>
+    <p>Ini adalah halaman utama.</p>
+  Music by <a href="https://pixabay.com/id/users/anaknusantara115-25146881/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=306705">anaknusantara115</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=306705">Pixabay</a>
+  </div>
+  
+
+<script>
+  let musik = new Audio("bright-ukulele-amp-claps-positive-background-music-306705.mp3");
+  musik.loop = true; // Agar musik berulang
+  
+  function qs(str){ return document.querySelector(str); }
+
+  function startAppSequence() {
+      const splashScreen = qs('#splashScreen');
+      const mainContent = qs('#mainContent');
+      const targetUrl = false//"4index.html"; // URL tujuan setelah splash screen
+      
+      // Mengubah subtitle untuk menunjukkan progress
+      qs('.subtitle').textContent = "Memuat konten...";
+      
+      // Timer untuk splash screen: 1 detik
+      setTimeout(() => {
+          splashScreen.classList.add('hidden');
+          
+          // Mengganti ke halaman lain atau menampilkan konten utama
+          if (targetUrl) {
+              // Jika Anda ingin mengarahkan ke halaman lain
+              document.location.href = targetUrl;
+          } else {
+              // Jika Anda ingin tetap di halaman ini (SPA)
+              mainContent.classList.add('show');
+          }
+      }, 2000); // 1 detik
+  }
+  
+  // --- Canvas Logic (Dipertahankan) ---
+  (function(){
+    const c=qs('#bgCanvas'),ctx=c.getContext('2d');let w=0,h=0,p=[];
+    function rand(a,b){return Math.random()*(b-a)+a;}
+    function mk(isResize = false){
+        const COUNT = Math.max(30, Math.min(80, Math.ceil((w * h) / 7000)));
+        if (p.length === 0 || isResize) { 
+             p=[]; 
+             for(let i=0; i < COUNT; i++){
+                p.push({x:rand(0,w),y:rand(0,h),r:rand(2,6),dx:rand(-0.6,0.6),dy:rand(-0.6,0.6),c:`hsla(${rand(160,320)},70%,70%,.4)`});
+            }
+        }
+    }
+    function rs(){
+        const parent = c.parentElement; 
+        w = c.width = parent.offsetWidth;
+        h = c.height = parent.offsetHeight;
+        if (w === 0 || h === 0) {
+            w = c.width = window.innerWidth;
+            h = c.height = window.innerHeight;
+        }
+        mk(true); 
+    }
+    function anim(){
+      ctx.clearRect(0,0,w,h);
+      p.forEach(o=>{
+        o.x+=o.dx;o.y+=o.dy;
+        if(o.x < 0 || o.x > w) o.dx*=-1;
+        if(o.y < 0 || o.y > h) o.dy*=-1;
+        ctx.beginPath();ctx.arc(o.x,o.y,o.r,0,Math.PI*2);
+        ctx.fillStyle=o.c;ctx.fill();
+      });
+      requestAnimationFrame(anim);
+    }
+    window.addEventListener('resize',rs);
+    rs(); 
+    anim();
+  })();
+  // --- End Canvas Logic ---
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const musicDialog = qs('#musicDialog');
+    const playMusicBtn = qs('#playMusicBtn');
+
+    // 1. Tombol Play Music
+    playMusicBtn.addEventListener('click', () => {
+        // Coba putar musik
+        musik.play().catch(error => {
+            console.error("Gagal memutar musik:", error);
+            // Handle error (misal, jika file tidak ditemukan)
+        });
+        
+        // Sembunyikan dialog
+        musicDialog.classList.add('hidden');
+        
+        // Mulai urutan splash screen (1 detik)
+        startAppSequence();
+    });
+    
+    // **Opsional: Jika Anda ingin mem-bypass musik:**
+    // Tambahkan delay kecil agar dialog sempat muncul sebelum memulai urutan.
+    /*
+    setTimeout(() => {
+        if (!musicDialog.classList.contains('hidden')) {
+            // Skenario jika pengguna tidak mengklik tombol, atau bypass (opsional)
+        }
+    }, 5000); 
+    */
+  });
+</script>
+</body>
+</html>
