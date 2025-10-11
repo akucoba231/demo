@@ -1,204 +1,501 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Splash Screen Fun Physical Activity</title>
-<link rel="stylesheet" href="splash.css" type="text/css" />
-<link rel="stylesheet" href="style.css" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="og:description" content="Halaman demo dari Fun Move" />
+  <title>Fun Move</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "PoetsenOne", sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .page {
+      opacity: 0;
+      visibility: hidden;
+      z-index: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 10;
+    }
+
+    @font-face {
+      font-family: 'Luckiest Guy';
+      src: url('css/LuckiestGuy-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'PoetsenOne';
+      src: url('css/PoetsenOne-Regular.ttf') format('truetype');
+    }
+
+    .text-title {
+      font-family: "Luckiest Guy", cursive;
+      font-weight: 800;
+    }
+
+    /* ===== SPLASH ===== */
+    #splash {
+      background-color: #3da9fc;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .fun { color: white; }
+    .move { color: #ffd60a; }
+
+    .run-img {
+      width: 150px;
+      margin: 1em auto;
+      display: block;
+    }
+
+    .progress {
+      width: 80%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      margin: 1em auto;
+      overflow: hidden;
+    }
+
+    .bar {
+      height: 100%;
+      width: 0%;
+      background-color: white;
+      animation: loading 3s forwards;
+    }
+
+    @keyframes loading {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    /* ===== FORM ===== */
+    #main {
+      background: url('assets/boy-waved.png') no-repeat center center;
+      background-size: 50%;
+      background-color: #ffe66d;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2em;
+    }
+
+    .header h2 {
+      font-size: 1.8em;
+      color: white;
+      text-shadow: 1px 2px #222;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.2);
+      border-radius: 15px;
+      padding: 1em;
+      text-align: center;
+      box-shadow: 1px 1px 4px #222;
+      margin-top: 1.5em;
+    }
+
+    .card input {
+      width: 95%;
+      border-radius: 10px;
+      padding: 2%;
+      margin: 2.5%;
+      font-size: 1rem;
+      background: transparent;
+      color: #fff;
+      text-shadow: 1px 1px #222;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .card input::placeholder {
+      color: white;
+      opacity: 0.6;
+    }
+
+    .card button {
+      background: #3da9fc;
+      color: #fff;
+      text-shadow: 1px 1px #222;
+      transition: 0.3s;
+      padding: 0.5em 2em;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .card button:active {
+      transform: scale(0.95);
+    }
+
+    /* ===== DASHBOARD ===== */
+    #dashboard {
+      background-color: #3da9fc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5em;
+      text-align: center;
+    }
+
+    #dashboard h1 {
+      font-family: 'Luckiest Guy', cursive;
+      color: white;
+      font-size: 2.8em;
+    }
+
+    #dashboard h1 span.move {
+      color: #ffd60a;
+    }
+
+    #dashboard p.subtitle {
+      color: #fff;
+      opacity: 0.8;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    #dashboard .hero img {
+      width: 130px;
+      margin: 1em 0;
+    }
+
+    #dashboard h2 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 1em;
+    }
+
+    .menu {
+      background: transparent;
+      border-radius: 20px;
+      padding: 1em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.8em;
+      width: 100%;
+    }
+
+    .menu button {
+      background: #eef5ff;
+      border-radius: 12px;
+      text-align: center;
+      padding: 1em;
+      transition: 0.3s;
+      font-weight: bold;
+      color: #222;
+      border: none;
+      cursor: pointer;
+      box-shadow: 1px 1px 3px #222;
+    }
+
+    .menu button:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== AKTIVITAS ===== */
+    #aktivitas {
+      background-color: #ffe66d;
+      padding: 1.5em;
+    }
+
+    #aktivitas h2 {
+      text-align: center;
+      font-family: 'Luckiest Guy', cursive;
+      margin-bottom: 1em;
+      color: #222;
+    }
+
+    .materi-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1em;
+    }
+
+    .materi-item {
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+      padding: 1em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .materi-item:hover {
+      transform: scale(1.05);
+    }
+
+    .materi-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 0.5em;
+    }
+
+    /* ===== DETAIL MATERI ===== */
+    #detailMateri {
+      background: #fefefe;
+      padding: 1.5em;
+      text-align: center;
+    }
+
+    #detailMateri img {
+      width: 200px;
+      margin: 1em 0;
+    }
+
+    #detailMateri h2 {
+      font-family: 'Luckiest Guy', cursive;
+      color: #3da9fc;
+    }
+
+    #detailMateri p {
+      margin: 1em auto;
+      width: 90%;
+      line-height: 1.4;
+    }
+
+    #detailMateri button, .page button {
+      background: #3da9fc;
+      color: white;
+      padding: 0.5em 1.5em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .page .menu button {
+      background: #fff;
+      color: #222;
+    }
+
+
+    /* ===== HALAMAN LAIN ===== */
+    #interaktif, #progress, #panduan {
+      background-color: #d0ebff;
+      padding: 1.5em;
+      text-align: center;
+    }
+
+    #interaktif h2, #progress h2, #panduan h2 {
+      font-family: 'Luckiest Guy', cursive;
+      color: #222;
+      margin-bottom: 1em;
+    }
+  </style>
 </head>
 <body>
+  <!-- Splash -->
+  <section id="splash" class="page active">
+    <h1><span class="fun text-title">FUN</span> <span class="move text-title">MOVE</span></h1>
+    <p>Ayo Bergerak Bersama!</p>
+    <img src="assets/girl-run.png" alt="Anak berlari" class="run-img" />
+    <div class="progress"><div class="bar"></div></div>
+  </section>
 
-  <div id="musicDialog" class="music-dialog">
-      <div class="dialog-card">
-          <p style="font-size:18px; font-weight:700; margin-bottom: 0;">Selamat Datang! 👋</p>
-          <p style="color: #577070;">Aplikasi ini memiliki musik latar. Apakah Anda ingin memutarnya sekarang?</p>
-          <button id="playMusicBtn" class="music-btn">🎧 Putar Musik & Lanjutkan</button>
-      </div>
-  </div>
-  
-  <div id="splashScreen" class="splash-screen" role="status" aria-label="Memuat aplikasi">
-    <canvas id="bgCanvas" class="canvas-bg-sp"></canvas>
-
-    <div class="header-center-sp">
-      <div id="logoWrapSp" class="logo-wrap-sp">
-        <svg class="logo-svg-sp" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ikon anak berlari">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#9feee9"/>
-              <stop offset="1" stop-color="#ffd1e0"/>
-            </linearGradient>
-            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#ffffff" stop-opacity="0.7"/>
-              <stop offset="1" stop-color="#ffffff" stop-opacity="0.3"/>
-            </linearGradient>
-          </defs>
-          <circle cx="60" cy="60" r="56" fill="url(#g1)"/>
-          <g transform="translate(12,8) scale(0.72)">
-            <path d="M62 26c-3 0-6 3-6 6 0 3 1 6 4 8 2 1 6 3 11 6 6 3 10 9 12 15 1 4 0 9-3 12l-8-4c2-3 2-6 1-9-1-4-4-7-8-9-4-2-8-3-12-5-4-2-8-5-10-9-2-3-2-7 1-10 2-2 6-3 9-2 3 0 6 1 9 1l-5 5z" fill="#fff"/>
-            <circle cx="26" cy="22" r="10" fill="#fff"/>
-            <path d="M36 76c6-6 12-12 18-16 5-3 10-7 12-12l8 3c-1 7-6 12-11 16-6 4-13 8-20 12l-7-3z" fill="#fff"/>
-          </g>
-          <circle cx="60" cy="60" r="56" fill="url(#g2)" opacity="0.18"/>
-        </svg>
-      </div>
-      <h1 class="title">Fun Physical Activity</h1>
-      <div class="subtitle">Memuat konten...</div>
+  <!-- Form -->
+  <section id="main" class="page">
+    <div class="header">
+      <h2>Halo!</h2>
+      <h2 id="sapaNama">Perkenalkan dirimu</h2>
     </div>
-  </div>
-  
-  
-  <!-- content utama -->
-    <div class="app" role="application" aria-label="Fun Physical Activity">
-    <canvas id="bgCanvas1" class="canvas-bg"></canvas>
+    <div class="card">
+      <input type="text" placeholder="Masukkan nama kamu" id="nama" />
+      <input type="text" placeholder="Masukkan umur kamu" id="umur" />
+      <input type="text" placeholder="Masukkan kelas kamu" id="kelas" />
+      <input type="text" placeholder="Masukkan sekolah kamu" id="sekolah" />
+      <input type="text" placeholder="Masukkan hobi kamu" id="hobi" />
+      <button id="simpanProfile" onclick="simpanProfile()">Simpan</button>
+    </div>
+  </section>
 
-    <header class="header-center">
-      
-      <div id="logoWrap" class="logo-wrap" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ikon anak berlari">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#9feee9"/>
-              <stop offset="1" stop-color="#ffd1e0"/>
-            </linearGradient>
-            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#ffffff" stop-opacity="0.7"/>
-              <stop offset="1" stop-color="#ffffff" stop-opacity="0.3"/>
-            </linearGradient>
-          </defs>
-          <circle cx="60" cy="60" r="56" fill="url(#g1)"/>
-          <g transform="translate(12,8) scale(0.72)">
-            <path d="M62 26c-3 0-6 3-6 6 0 3 1 6 4 8 2 1 6 3 11 6 6 3 10 9 12 15 1 4 0 9-3 12l-8-4c2-3 2-6 1-9-1-4-4-7-8-9-4-2-8-3-12-5-4-2-8-5-10-9-2-3-2-7 1-10 2-2 6-3 9-2 3 0 6 1 9 1l-5 5z" fill="#fff"/>
-            <circle cx="26" cy="22" r="10" fill="#fff"/>
-            <path d="M36 76c6-6 12-12 18-16 5-3 10-7 12-12l8 3c-1 7-6 12-11 16-6 4-13 8-20 12l-7-3z" fill="#fff"/>
-          </g>
-          <circle cx="60" cy="60" r="56" fill="url(#g2)" opacity="0.18"/>
-        </svg>
-      </div>
-      <h1 class="title">Fun Physical Activity</h1>
-      <div class="subtitle">Belajar gerak, main, dan catat aktivitas!</div>
-    </header>
+  <!-- Dashboard -->
+  <section id="dashboard" class="page">
+    <div>
+      <h1><span class="fun">FUN</span> <span class="move">MOVE</span></h1>
+      <p class="subtitle">Physical Activity 10-12</p>
+    </div>
+    <div class="hero">
+      <img src="assets/girl-run.png" alt="Running girl" />
+      <h2 id="sapaanDashboard">Ayo Bergerak!</h2>
+    </div>
+    <div class="menu">
+      <button onclick="showPage('aktivitas')">Aktivitas</button>
+      <button onclick="showPage('interaktif')">Interaktif</button>
+      <button onclick="showPage('progress')">Progress</button>
+      <button onclick="showPage('panduan')">Panduan</button>
+    </div>
+  </section>
 
-    <main class="main" role="main">
-      <div class="content-col">
-        <section id="homeCard" class="card section active" aria-live="polite">
-          <h2 style="margin:0 0 6px 0">Halo! Pilih aktivitasmu</h2>
-          <!--<p class="muted" style="margin:0">Ikon di kiri — teks & deskripsi di kanan</p>-->
+  <!-- Aktivitas -->
+  <section id="aktivitas" class="page">
+    <h2>Daftar Aktivitas</h2>
+    <div class="materi-list" id="listAktivitas"></div>
+    <button onclick="showPage('dashboard')">Kembali ke Dashboard</button>
+  </section>
 
-          <div id="menuList" class="menu-list" aria-label="Menu utama">
-            <div class="menu-item" data-target="belajar">
-              <div class="mi-ico ico-blue">📚</div>
-              <div class="mi-text"><div class="mi-title">Belajar</div><div class="mi-sub">Pengenalan & video singkat</div></div>
-            </div>
-            <div class="menu-item" data-target="aktivitas">
-              <div class="mi-ico ico-pink">🤸</div>
-              <div class="mi-text"><div class="mi-title">Aktivitas Jasmani</div><div class="mi-sub">Checklist latihan & tutorial</div></div>
-            </div>
-            <div class="menu-item" data-target="kuis">
-              <div class="mi-ico ico-mint">🎮</div>
-              <div class="mi-text"><div class="mi-title">Kuis</div><div class="mi-sub">Mini games & pertanyaan seru</div></div>
-            </div>
-            <div class="menu-item" data-target="refleksi">
-              <div class="mi-ico ico-peach">📝</div>
-              <div class="mi-text"><div class="mi-title">Refleksi / Jurnal</div><div class="mi-sub">Catat aktivitas harian</div></div>
-            </div>
-            <div class="menu-item" data-target="profil">
-              <div class="mi-ico ico-blue">👦</div>
-              <div class="mi-text"><div class="mi-title">Profil & Laporan</div><div class="mi-sub">Lihat progres dan skor</div></div>
-            </div>
-            <div class="menu-item" data-target="bantuan">
-              <div class="mi-ico ico-pink">❓</div>
-              <div class="mi-text"><div class="mi-title">Bantuan</div><div class="mi-sub">Panduan singkat & FAQ</div></div>
-            </div>
-          </div>
+  <!-- Detail Materi -->
+  <section id="detailMateri" class="page">
+    <img id="materiGambar" src="" alt="Gambar Materi">
+    <h2 id="materiJudul"></h2>
+    <p id="materiDeskripsi"></p>
+    <button onclick="showPage('aktivitas')">Kembali</button>
+  </section>
 
-          <div class="card-bottom">
-            <!--<div class="muted">Versi 2.2 — Row Layout & Netral Icon</div>-->
-            <div class="row" style="align-items:center;gap:10px">
-              <label class="muted" style="display:flex;align-items:center;gap:8px"><input type="checkbox" id="toggleSound" checked>Suara</label>
-              <button id="resetHome" class="small-btn">Reset</button>
-            </div>
-          </div>
-        </section>
+  <!-- Interaktif -->
+  <section id="interaktif" class="page">
+    <h2>Interaktif</h2>
+    <p>Konten interaktif akan tersedia di sini.</p>
+    <button onclick="showPage('dashboard')">Kembali ke Dashboard</button>
+  </section>
 
-        <section id="belajar" class="card section" aria-hidden="true">
-          <h2>📚 Belajar</h2>
-          <p class="muted">Video singkat dan penjelasan ringan tentang aktivitas fisik.</p>
-          <div style="margin-top:12px">
-            <video controls width="100%" style="border-radius:12px"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">Browsermu tidak mendukung video.</video>
-          </div>
-          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
-        </section>
+  <!-- Progress -->
+  <section id="progress" class="page">
+    <h2>Progress</h2>
+    <p>Lihat perkembangan aktivitas kamu di sini.</p>
+    <button onclick="showPage('dashboard')">Kembali ke Dashboard</button>
+  </section>
 
-        <section id="aktivitas" class="card section" aria-hidden="true">
-          <h2>🤸 Aktivitas Jasmani</h2>
-          <p class="muted">Ikuti tutorial sederhana & centang yang sudah dilakukan.</p>
-          <div style="margin-top:12px">
-            <div id="checklist" class="checklist">
-              <label><input type="checkbox" data-activity="Lari di tempat 1 menit"> Lari di tempat — 1 menit</label>
-              <label><input type="checkbox" data-activity="Lompat tali 10x"> Lompat tali — 10 kali</label>
-              <label><input type="checkbox" data-activity="Push-up 5x"> Push-up ringan — 5 kali</label>
-            </div>
-            <div class="row" style="margin-top:10px">
-              <button id="saveActivities" class="small-btn">Simpan</button>
-              <div id="saveNote" class="muted"></div>
-            </div>
-          </div>
-          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
-        </section>
+  <!-- Panduan -->
+  <section id="panduan" class="page">
+    <h2>Panduan</h2>
+    <p>Panduan lengkap untuk membantu kamu bergerak lebih baik.</p>
+    <button onclick="showPage('dashboard')">Kembali ke Dashboard</button>
+  </section>
 
-        <section id="kuis" class="card section" aria-hidden="true">
-          <h2>🎮 Kuis</h2>
-          <p class="muted">Pilih jawaban yang benar. Benar = konfeti + pop.</p>
-          <div class="quiz" style="margin-top:12px">
-            <div class="option" data-correct="true">Bermain bola di halaman — aktivitas sehat</div>
-            <div class="option" data-correct="false">Duduk sepanjang hari menonton TV</div>
-            <div class="option" data-correct="false">Makan permen terus tanpa olahraga</div>
-          </div>
-          <div id="quizFeedback" class="muted" style="margin-top:10px"></div>
-          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
-        </section>
+  <script>
+    // Dummy data
+    const materiData = [
+      {
+        id: 1,
+        judul: "Peregangan Dasar",
+        deskripsi: "Latihan ringan untuk memulai hari dengan tubuh segar dan siap beraktivitas.",
+        gambar: "assets/stretch.png"
+      },
+      {
+        id: 2,
+        judul: "Lompat Tali",
+        deskripsi: "Melatih kelincahan dan kebugaran tubuh dengan cara yang menyenangkan.",
+        gambar: "assets/jump.png"
+      }
+    ];
 
-        <section id="refleksi" class="card section" aria-hidden="true">
-          <h2>📝 Refleksi / Jurnal</h2>
-          <p class="muted">Tulis apa yang kamu lakukan hari ini (singkat):</p>
-          <textarea id="journal" rows="5" style="width:100%;margin-top:10px;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.05)"></textarea>
-          <div class="row" style="margin-top:10px">
-            <button id="saveJournal" class="small-btn">Simpan</button>
-            <div id="journalNote" class="muted"></div>
-          </div>
-          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
-        </section>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        showPage("main");
+      }, 3000);
+    });
 
-        <section id="profil" class="card section" aria-hidden="true">
-          <h2>👦 Profil & Laporan</h2>
-          <p class="muted">Nama: <strong>Andi</strong> — Umur: <strong>10</strong> — Kelas: <strong>4 SD</strong></p>
-          <p class="muted" style="margin-top:8px">Progress: <strong id="streak">3</strong> hari berturut-turut aktif 🏅</p>
-          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
-        </section>
+    function showPage(id) {
+      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
 
-        <section id="bantuan" class="card section" aria-hidden="true">
-          <h2>❓ Bantuan</h2>
-          <p class="muted">Gunakan menu Home untuk berpindah. Efek suara dapat dimatikan jika perlu.</p>
-          <div class="row" style="margin-top:10px">
-            <label class="muted"><input type="checkbox" id="toggleSound2" checked> Suara efek aktif</label>
-          </div>
-          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
-        </section>
+      if (id === "dashboard") {
+        let tmp = getProfile();
+        document.getElementById("sapaanDashboard").textContent = `Halo, ${tmp}! Ayo Bergerak!`;
+      } 
+      else if (id === "aktivitas") {
+        renderAktivitas();
+      }
+      else if(id === "main"){
+        if(localStorage.getItem('profile') != undefined){
+          showPage('dashboard');
+          return;
+        }
 
-      </div>
-    </main>
+      }
+    }
 
-    <footer style="z-index:2;text-align:center;color:#3c6565">© 2025 Fun Physical Activity <!--— Versi 2.2-->
-    <p>
-      Music by <a href="https://pixabay.com/id/users/anaknusantara115-25146881/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=306705">anaknusantara115</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=306705">Pixabay</a>
-    </p>
-    </footer>
-  </div>
+    function simpanProfile() {
+      const nama = document.getElementById("nama").value.trim();
+      if (!nama) {
+        alert("Nama tidak boleh kosong!");
+        return;
+      }
 
-  
- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script src="scriptUtama.js"></script>
-<script src="script.js"></script>
+      const dataProfile = {
+        nama,
+        umur: document.getElementById("umur").value,
+        kelas: document.getElementById("kelas").value,
+        sekolah: document.getElementById("sekolah").value,
+        hobi: document.getElementById("hobi").value
+      };
+
+      localStorage.setItem("profile", JSON.stringify(dataProfile));
+      showPage("dashboard");
+    }
+
+    function getProfile() {
+      if(localStorage.getItem('profile') != undefined){
+      let tmp = localStorage.getItem('profile');
+      tmp = JSON.parse(tmp);
+      return tmp.nama;
+      }
+      else {
+        return false;
+      }
+    }
+
+    function renderAktivitas() {
+      const container = document.getElementById("listAktivitas");
+      container.innerHTML = materiData.map(m => `
+        <div class="materi-item" onclick="openMateri(${m.id})">
+          <img src="${m.gambar}" alt="${m.judul}">
+          <h3>${m.judul}</h3>
+        </div>
+      `).join("");
+    }
+
+    function openMateri(id) {
+      const data = materiData.find(m => m.id === id);
+      document.getElementById("materiJudul").textContent = data.judul;
+      document.getElementById("materiDeskripsi").textContent = data.deskripsi;
+      document.getElementById("materiGambar").src = data.gambar;
+      showPage("detailMateri");
+    }
+  </script>
 </body>
 </html>
