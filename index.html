@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Splash Screen Fun Physical Activity</title>
+<link rel="stylesheet" href="splash.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+
+  <div id="musicDialog" class="music-dialog">
+      <div class="dialog-card">
+          <p style="font-size:18px; font-weight:700; margin-bottom: 0;">Selamat Datang! 👋</p>
+          <p style="color: #577070;">Aplikasi ini memiliki musik latar. Apakah Anda ingin memutarnya sekarang?</p>
+          <button id="playMusicBtn" class="music-btn">🎧 Putar Musik & Lanjutkan</button>
+      </div>
+  </div>
+  
+  <div id="splashScreen" class="splash-screen" role="status" aria-label="Memuat aplikasi">
+    <canvas id="bgCanvas" class="canvas-bg-sp"></canvas>
+
+    <div class="header-center-sp">
+      <div id="logoWrapSp" class="logo-wrap-sp">
+        <svg class="logo-svg-sp" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ikon anak berlari">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#9feee9"/>
+              <stop offset="1" stop-color="#ffd1e0"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.7"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0.3"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="56" fill="url(#g1)"/>
+          <g transform="translate(12,8) scale(0.72)">
+            <path d="M62 26c-3 0-6 3-6 6 0 3 1 6 4 8 2 1 6 3 11 6 6 3 10 9 12 15 1 4 0 9-3 12l-8-4c2-3 2-6 1-9-1-4-4-7-8-9-4-2-8-3-12-5-4-2-8-5-10-9-2-3-2-7 1-10 2-2 6-3 9-2 3 0 6 1 9 1l-5 5z" fill="#fff"/>
+            <circle cx="26" cy="22" r="10" fill="#fff"/>
+            <path d="M36 76c6-6 12-12 18-16 5-3 10-7 12-12l8 3c-1 7-6 12-11 16-6 4-13 8-20 12l-7-3z" fill="#fff"/>
+          </g>
+          <circle cx="60" cy="60" r="56" fill="url(#g2)" opacity="0.18"/>
+        </svg>
+      </div>
+      <h1 class="title">Fun Physical Activity</h1>
+      <div class="subtitle">Memuat konten...</div>
+    </div>
+  </div>
+  
+  
+  <!-- content utama -->
+    <div class="app" role="application" aria-label="Fun Physical Activity">
+    <canvas id="bgCanvas1" class="canvas-bg"></canvas>
+
+    <header class="header-center">
+      
+      <div id="logoWrap" class="logo-wrap" aria-hidden="true">
+        <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ikon anak berlari">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#9feee9"/>
+              <stop offset="1" stop-color="#ffd1e0"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.7"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0.3"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="56" fill="url(#g1)"/>
+          <g transform="translate(12,8) scale(0.72)">
+            <path d="M62 26c-3 0-6 3-6 6 0 3 1 6 4 8 2 1 6 3 11 6 6 3 10 9 12 15 1 4 0 9-3 12l-8-4c2-3 2-6 1-9-1-4-4-7-8-9-4-2-8-3-12-5-4-2-8-5-10-9-2-3-2-7 1-10 2-2 6-3 9-2 3 0 6 1 9 1l-5 5z" fill="#fff"/>
+            <circle cx="26" cy="22" r="10" fill="#fff"/>
+            <path d="M36 76c6-6 12-12 18-16 5-3 10-7 12-12l8 3c-1 7-6 12-11 16-6 4-13 8-20 12l-7-3z" fill="#fff"/>
+          </g>
+          <circle cx="60" cy="60" r="56" fill="url(#g2)" opacity="0.18"/>
+        </svg>
+      </div>
+      <h1 class="title">Fun Physical Activity</h1>
+      <div class="subtitle">Belajar gerak, main, dan catat aktivitas!</div>
+    </header>
+
+    <main class="main" role="main">
+      <div class="content-col">
+        <section id="homeCard" class="card section active" aria-live="polite">
+          <h2 style="margin:0 0 6px 0">Halo! Pilih aktivitasmu</h2>
+          <!--<p class="muted" style="margin:0">Ikon di kiri — teks & deskripsi di kanan</p>-->
+
+          <div id="menuList" class="menu-list" aria-label="Menu utama">
+            <div class="menu-item" data-target="belajar">
+              <div class="mi-ico ico-blue">📚</div>
+              <div class="mi-text"><div class="mi-title">Belajar</div><div class="mi-sub">Pengenalan & video singkat</div></div>
+            </div>
+            <div class="menu-item" data-target="aktivitas">
+              <div class="mi-ico ico-pink">🤸</div>
+              <div class="mi-text"><div class="mi-title">Aktivitas Jasmani</div><div class="mi-sub">Checklist latihan & tutorial</div></div>
+            </div>
+            <div class="menu-item" data-target="kuis">
+              <div class="mi-ico ico-mint">🎮</div>
+              <div class="mi-text"><div class="mi-title">Kuis</div><div class="mi-sub">Mini games & pertanyaan seru</div></div>
+            </div>
+            <div class="menu-item" data-target="refleksi">
+              <div class="mi-ico ico-peach">📝</div>
+              <div class="mi-text"><div class="mi-title">Refleksi / Jurnal</div><div class="mi-sub">Catat aktivitas harian</div></div>
+            </div>
+            <div class="menu-item" data-target="profil">
+              <div class="mi-ico ico-blue">👦</div>
+              <div class="mi-text"><div class="mi-title">Profil & Laporan</div><div class="mi-sub">Lihat progres dan skor</div></div>
+            </div>
+            <div class="menu-item" data-target="bantuan">
+              <div class="mi-ico ico-pink">❓</div>
+              <div class="mi-text"><div class="mi-title">Bantuan</div><div class="mi-sub">Panduan singkat & FAQ</div></div>
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <!--<div class="muted">Versi 2.2 — Row Layout & Netral Icon</div>-->
+            <div class="row" style="align-items:center;gap:10px">
+              <label class="muted" style="display:flex;align-items:center;gap:8px"><input type="checkbox" id="toggleSound" checked>Suara</label>
+              <button id="resetHome" class="small-btn">Reset</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="belajar" class="card section" aria-hidden="true">
+          <h2>📚 Belajar</h2>
+          <p class="muted">Video singkat dan penjelasan ringan tentang aktivitas fisik.</p>
+          <div style="margin-top:12px">
+            <video controls width="100%" style="border-radius:12px"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">Browsermu tidak mendukung video.</video>
+          </div>
+          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
+        </section>
+
+        <section id="aktivitas" class="card section" aria-hidden="true">
+          <h2>🤸 Aktivitas Jasmani</h2>
+          <p class="muted">Ikuti tutorial sederhana & centang yang sudah dilakukan.</p>
+          <div style="margin-top:12px">
+            <div id="checklist" class="checklist">
+              <label><input type="checkbox" data-activity="Lari di tempat 1 menit"> Lari di tempat — 1 menit</label>
+              <label><input type="checkbox" data-activity="Lompat tali 10x"> Lompat tali — 10 kali</label>
+              <label><input type="checkbox" data-activity="Push-up 5x"> Push-up ringan — 5 kali</label>
+            </div>
+            <div class="row" style="margin-top:10px">
+              <button id="saveActivities" class="small-btn">Simpan</button>
+              <div id="saveNote" class="muted"></div>
+            </div>
+          </div>
+          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
+        </section>
+
+        <section id="kuis" class="card section" aria-hidden="true">
+          <h2>🎮 Kuis</h2>
+          <p class="muted">Pilih jawaban yang benar. Benar = konfeti + pop.</p>
+          <div class="quiz" style="margin-top:12px">
+            <div class="option" data-correct="true">Bermain bola di halaman — aktivitas sehat</div>
+            <div class="option" data-correct="false">Duduk sepanjang hari menonton TV</div>
+            <div class="option" data-correct="false">Makan permen terus tanpa olahraga</div>
+          </div>
+          <div id="quizFeedback" class="muted" style="margin-top:10px"></div>
+          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
+        </section>
+
+        <section id="refleksi" class="card section" aria-hidden="true">
+          <h2>📝 Refleksi / Jurnal</h2>
+          <p class="muted">Tulis apa yang kamu lakukan hari ini (singkat):</p>
+          <textarea id="journal" rows="5" style="width:100%;margin-top:10px;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.05)"></textarea>
+          <div class="row" style="margin-top:10px">
+            <button id="saveJournal" class="small-btn">Simpan</button>
+            <div id="journalNote" class="muted"></div>
+          </div>
+          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
+        </section>
+
+        <section id="profil" class="card section" aria-hidden="true">
+          <h2>👦 Profil & Laporan</h2>
+          <p class="muted">Nama: <strong>Andi</strong> — Umur: <strong>10</strong> — Kelas: <strong>4 SD</strong></p>
+          <p class="muted" style="margin-top:8px">Progress: <strong id="streak">3</strong> hari berturut-turut aktif 🏅</p>
+          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
+        </section>
+
+        <section id="bantuan" class="card section" aria-hidden="true">
+          <h2>❓ Bantuan</h2>
+          <p class="muted">Gunakan menu Home untuk berpindah. Efek suara dapat dimatikan jika perlu.</p>
+          <div class="row" style="margin-top:10px">
+            <label class="muted"><input type="checkbox" id="toggleSound2" checked> Suara efek aktif</label>
+          </div>
+          <div class="card-bottom"><div></div><button class="back-btn" data-back="home">⬅️ Kembali</button></div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer style="z-index:2;text-align:center;color:#3c6565">© 2025 Fun Physical Activity <!--— Versi 2.2-->
+    <p>
+      Music by <a href="https://pixabay.com/id/users/anaknusantara115-25146881/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=306705">anaknusantara115</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=306705">Pixabay</a>
+    </p>
+    </footer>
+  </div>
+
+  
+ <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="scriptUtama.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

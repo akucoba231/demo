@@ -1,0 +1,119 @@
+
+/* --- Variabel & Global Styles --- */
+:root{
+  --bg1:#a8edea;
+  --bg2:#fed6e3;
+  --card:rgba(255,255,255,0.94);
+  --accent:#6ec6d9;
+  --text:#173737;
+  --anim:320ms;
+}
+body{
+  margin:0;
+  font-family:"Poppins", "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition: opacity 0.5s ease;
+
+}
+
+/* --- Dialog Musik (Modal) --- */
+.music-dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 200; /* Di atas splash screen (z-index: 100) */
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 300ms ease;
+}
+.music-dialog.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.dialog-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+}
+.music-btn {
+    background: linear-gradient(180deg, var(--accent), #56a5bb);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 150ms ease;
+    margin-top: 15px;
+}
+.music-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* --- Splash Screen Styles --- */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: opacity 1s ease, visibility 1s ease;
+    background: linear-gradient(135deg, var(--bg1), var(--bg2));
+    overflow: hidden;
+}
+.splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.canvas-bg-sp{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+}
+.header-center-sp{
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    padding: 20px;
+    max-width: 90%; 
+    text-align: center;
+}
+.logo-wrap-sp{width:140px;height:140px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.7));box-shadow:0 12px 26px rgba(0,0,0,0.06);transform-origin:center;}
+.title{margin:0;font-size:28px;color:#174b4b; margin-top: 16px; font-weight: 700;}
+.subtitle{margin:0;color:#4e7b7b;font-size:16px}
+.content {
+    opacity: 0;
+    transition: opacity 0.5s ease 1s;
+    text-align: center;
+    overflow: scroll;
+}
+.content.show {
+    opacity: 1;
+}
+
+.logo-svg-sp {
+    width: 100%;
+    height: 100%;
+}
