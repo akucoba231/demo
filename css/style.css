@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PoetsenOne", sans-serif;
+}
+
+/* ===== SPLASH SCREEN ===== */
+#splash {
+  background-color: #3da9fc;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-content {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Luckiest Guy';
+  src: url('LuckiestGuy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PoetsenOne';
+  src: url('PoetsenOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-title {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fun {
+  color: white;
+  font-weight: 700;
+}
+
+.move {
+  color: #ffd60a;
+  font-weight: 700;
+}
+
+.run-img {
+  width: 150px;
+  margin: 1em auto;
+  display: block;
+}
+
+.progress {
+  width: 80%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 1em auto;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  width: 0%;
+  background-color: white;
+  animation: loading 3s forwards;
+}
+
+@keyframes loading {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* ===== HALAMAN UTAMA ===== */
+#main {
+  background: url('../assets/boy-waved.png') no-repeat center center;
+  background-size: cover;
+  background-color: #ffe66d;
+  height: 100vh;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.header h2 {
+  font-size: 1.8em;
+  color: white;
+  text-shadow: 1px 2px #222;
+}
+
+.header p {
+  color: white;
+  text-shadow: 1px 2px #222;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  margin-top: 1.5em;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.big {
+  grid-column: span 2;
+  background: transparent;
+  box-shadow: 1px 1px 3px #222;
+}
+
+.card input {
+  width: 95%;
+  border-radius: 10px;
+  padding: 2%;
+  margin: 2.5%;
+  font-size: 1rem;
+  background: transparent;
+  color: #fff;
+  text-shadow: 1px 1px #222;
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 0.5em;
+}
+
+.card p {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.card input::placeholder {
+  color: white;
+  text-shadow: 1px 1px #222;
+  opacity: 0.3; /* Firefox */
+}
+
+.card button {
+  background: #3da9fc;
+  color: #fff;
+  text-shadow: 1px 1px #222;
+  transform: scale(1.0);
+  transition: 0.5s;
+  padding: 2% 10%;
+  border-radius: 10px;
+}
+
+.card button:active {
+  box-shadow: inset 2px 2px 5px #222;
+  transform: scale(0.8);
+}
