@@ -1,7 +1,9 @@
+let baseImage = "./images/";
+
 const part1 = [
   {
     "aktivitas": "Tarik Bajai 1 (Bawa Jalan, lompat, dan lari)",
-    "gambar": null,
+    "gambar": baseImage + "tarik_bajai1.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih variasi gerak dasar lokomotor yaitu lari, jalan dan lompat.",
     "alat": ["Hula hop/ lingkaran", "Tali", "Cone", "Peluit"],
     "praktik": [
@@ -13,11 +15,11 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak kembali lagi sampai ke garis start"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Tarik Bajai 2",
-    "gambar": null,
+    "gambar": baseImage + "tarik_bajai2.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih variasi gerak dasar lokomotor yaitu lari, jalan dan lompat.",
     "alat": ["Hula hop/ lingkaran", "Tali", "Cone", "Peluit"],
     "praktik": [
@@ -29,11 +31,11 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Dan anak yang melakukan kembali lagi menuju garis start"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Tarik Bajai 3",
-    "gambar": null,
+    "gambar": baseImage + "tarik_bajai3.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih variasi gerak dasar lokomotor yaitu lari, jalan dan lompat.",
     "alat": ["Hula hop/ lingkaran", "Tali", "Cone", "Peluit"],
     "praktik": [
@@ -45,11 +47,11 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak melakukan aktivitas tersebut hingga kembali lagi sampai ke garis start"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Tarik Bajai 4",
-    "gambar": null,
+    "gambar": baseImage + "tarik_bajai4.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih variasi gerak dasar lokomotor yaitu lari, jalan dan lompat.",
     "alat": ["Hula hop/ lingkaran", "Tali", "Cone", "Peluit"],
     "praktik": [
@@ -61,11 +63,11 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak kembali lagi sampai ke garis start"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Tarik Bajai 5",
-    "gambar": null,
+    "gambar": baseImage + "tarik_bajai5.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih variasi gerak dasar lokomotor yaitu lari, jalan dan lompat.",
     "alat": ["Hula hop/ lingkaran", "Tali", "Cone", "Peluit"],
     "praktik": [
@@ -77,14 +79,14 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak yang melakukan aktivitas tersebut kembali lagi sampai hingga ke garis start"
     ],
-    "video": null
+    "video": baseImage
   }
 ];
 
 const part2 = [
   {
     "aktivitas": "Tarik Bajai 6",
-    "gambar": null,
+    "gambar": baseImage + "tarik_bajai6.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih variasi gerak dasar lokomotor yaitu lari, jalan dan lompat.",
     "alat": ["Hula hop/ lingkaran", "Tali", "Cone", "Peluit"],
     "praktik": [
@@ -96,11 +98,11 @@ const part2 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak kembali lagi sampai ke garis start"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Tarik Bajai 7",
-    "gambar": null,
+    "gambar": baseImage + "tarik_bajai7.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih variasi gerak dasar lokomotor yaitu lari, jalan dan lompat.",
     "alat": ["Hula hop/ lingkaran", "Tali", "Cone", "Peluit"],
     "praktik": [
@@ -112,11 +114,11 @@ const part2 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak kembali lagi sampai ke garis start"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Tongkat sang raja",
-    "gambar": null,
+    "gambar": baseImage + "tongkat_sang_raja.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih kekuatan otot tungkai.",
     "alat": ["Tongkat", "Bangku", "Cone", "Peluit", "Stopwatch"],
     "praktik": [
@@ -128,11 +130,11 @@ const part2 = [
       "Waktu yang diberikan selama 30 detik",
       "Setelah waktu selesai ditandai dengan bunyi pluit peserta melaporkan jumlah berapa kali ia mampu memegang cone tersebut setelah itu berganti posisi"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Tongkat sang raja (variasi 1)",
-    "gambar": null,
+    "gambar": baseImage + "tongkat_sang_raja_variasi_1.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih kebugaran jasmani terkait kekuatan otot tungkai.",
     "alat": ["Tongkat", "Bangku", "Cone", "Peluit", "Stopwatch"],
     "praktik": [
@@ -145,11 +147,11 @@ const part2 = [
       "Waktu yang diberikan selama 30 detik",
       "Setelah waktu selesai ditandai dengan bunyi pluit peserta melaporkan jumlah berapa kali ia mampu memegang cone tersebut setelah itu berganti posisi"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Tongkat sang raja (variasi 2)",
-    "gambar": null,
+    "gambar": baseImage + "tongkat_sang_raja_variasi_2.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih kebugaran jasmani terkait kekuatan otot tungkai.",
     "alat": ["Tongkat", "Bangku", "Cone", "Peluit", "Stopwatch"],
     "praktik": [
@@ -162,14 +164,14 @@ const part2 = [
       "Waktu yang diberikan selama 1 menit",
       "Setelah waktu selesai ditandai dengan bunyi pluit peserta melaporkan jumlah berapa kali ia mampu memegang cone tersebut setelah itu berganti posisi"
     ],
-    "video": null
+    "video": baseImage
   }
 ];
 
 const part3 = [
   {
     "aktivitas": "ADUK (Anak Duduk angkat lutut kaki)",
-    "gambar": null,
+    "gambar": baseImage + "anak_duduk_angkat_kaki.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih kebugaran jasmani terkait kekuatan otot perut, dan otot paha, membiasakan gerak nonlokomotor menekuk lutut. Membantu tubuh menstabilkan diri sehingga tidak mudah jatuh. Menunjang Aktivitas Sehari-hari mempermudah gerakan seperti duduk, berdiri, dan berjalan.",
     "alat": ["Bangku", "Peluit", "Stopwatch"],
     "praktik": [
@@ -181,11 +183,11 @@ const part3 = [
       "Waktu yang diberikan selama 1 menit",
       "Setelah waktu selesai ditandai dengan bunyi pluit peserta melaporkan jumlah berapa kali ia mampu mengangkat lutut dan kakinya setelah itu berganti posisi"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Bolkat (Boling Angkat Kaki Lutut)",
-    "gambar": null,
+    "gambar": baseImage + "boling_angkat_kaki_lutut.png",
     "tujuan": "aktivitas ini bertujuan untuk gerak manipulative dan melatih kebugaran jasmani terkait kekuatan otot perut, dan otot paha, membiasakan gerak nonlokomotor menekuk lutut. Membantu tubuh menstabilkan diri sehingga tidak mudah jatuh. Menunjang Aktivitas Sehari-hari mempermudah gerakan seperti duduk, berdiri, dan berjalan.",
     "alat": ["Bangku", "Bola", "Peluit", "Stopwatch"],
     "praktik": [
@@ -195,11 +197,11 @@ const part3 = [
       "Guru memberi aba start dengan menggunakan peluit dan sambil menjalankan stopwatch, untuk menandai awal dan berakhirnya permainan",
       "Setelah waktu selesai ditandai dengan bunyi pluit catat skore yang diperoleh dan berganti posisi"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Run Touch",
-    "gambar": null,
+    "gambar": baseImage + "run_touch.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor lari, melatih kecepatan dan daya tahan.",
     "alat": ["Cone", "Peluit", "Stopwatch", "Music"],
     "praktik": [
@@ -208,11 +210,11 @@ const part3 = [
       "Anak yang lainnya ada yang menghitung dan mencatat berapa kali anak yang berlari dapat menyentuh cone",
       "Setelah music berhenti, anak berhenti juga berlarinya. Setelah itu bergantian dengan yang tadi mencatat"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Lajeslow (lari jalan cepat slow)",
-    "gambar": null,
+    "gambar": baseImage + "lari_jalan_cepat_slow.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor lari dan jalan, melatih kecepatan dan daya tahan.",
     "alat": ["Cone", "Peluit", "Stopwatch", "Speaker Music"],
     "praktik": [
@@ -220,11 +222,11 @@ const part3 = [
       "Apabila music berbunyi dengan beet cepat anak berlari dan music dengan beet slow anak berjalan mengelilingi lapangan",
       "Aktivitas ini dilakukan selama 5 menit"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Suit-suit Hore",
-    "gambar": null,
+    "gambar": baseImage + "suit_suit_hore.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor lari.",
     "alat": ["Cone", "Peluit"],
     "praktik": [
@@ -237,14 +239,14 @@ const part3 = [
       "Selanjutnya seperti itu sampai cone habis",
       "Kelompok yang mengumpulkan cone paling banyak maka kelompok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   }
 ];
 
 const part4 = [
   {
     "aktivitas": "Suit pintar",
-    "gambar": null,
+    "gambar": baseImage + "suit_pintar.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor lompat dan lari, juga untuk literasi numerasi.",
     "alat": ["Cone", "Peluit", "Lingkaran/hula hop"],
     "praktik": [
@@ -257,11 +259,11 @@ const part4 = [
       "Selanjutnya seperti itu sampai cone habis",
       "Kelompok yang mengumpulkan cone paling banyak maka kelompok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Jalur Rahasia",
-    "gambar": null,
+    "gambar": baseImage + "jalur_rahasia.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor berjalan dan melatih nalar pemecahan masalah.",
     "alat": ["Cone", "Peluit", "Lingkaran/hula hop"],
     "praktik": [
@@ -272,11 +274,11 @@ const part4 = [
       "Apabila anak gagal, bergantian dengan anak berikutnya",
       "Anak dikatakan berhasil apabila melewati jalur rahasia tanpa ada lingkaran yang terlewat atau dilalui lebih dari satu kali"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Jalur Rahasia (variasi 1)",
-    "gambar": null,
+    "gambar": baseImage + "jalur_rahasia_variasi1(2).png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor melompat dan melatih nalar pemecahan masalah.",
     "alat": ["Cone", "Peluit", "Lingkaran/hula hop"],
     "praktik": [
@@ -287,11 +289,11 @@ const part4 = [
       "Apabila anak gagal, bergantian dengan anak berikutnya",
       "Anak dikatakan berhasil apabila melewati jalur rahasia tanpa ada lingkaran yang terlewat atau dilalui lebih dari satu kali"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Egg Run",
-    "gambar": null,
+    "gambar": baseImage + "egg_run.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor lari, melatih kecepatan dan kerjasama. Anak berlari mengambil egg yang diganti dengan bola didalam keranjang menaruh diatas sarang/cone.",
     "alat": ["Cone mangkuk", "Peluit", "Bola kecil", "Ember/keranjang"],
     "praktik": [
@@ -300,11 +302,11 @@ const part4 = [
       "Anak berikutnya berlari untuk mengambil bola dan menaruhnya diatas cone berikutnya",
       "Kelompok yang paling dahulu menyelesaikan dengan menaruh bola pada setiap cone maka kelopmpok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Egg Run (variasi 1)",
-    "gambar": null,
+    "gambar": baseImage + "egg_run_variasi_1.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor lari, melatih kecepatan dan kerjasama. Anak berlari mengambil egg yang diganti dengan bola didalam keranjang menaruh diatas sarang/cone.",
     "alat": ["Cone mangkuk", "Peluit", "Bola kecil", "Ember/keranjang"],
     "praktik": [
@@ -314,14 +316,14 @@ const part4 = [
       "Anak berikutnya berlari seperti anak pertama dan mengambil bola dan menaruhnya diatas cone",
       "Kelompok yang paling dahulu menyelesaikan dengan menaruh bola pada setiap cone maka kelompok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   }
 ];
 
 const part5 = [
   {
     "aktivitas": "Egg Run (variasi 2)",
-    "gambar": null,
+    "gambar": baseImage + "egg_run_variasi_2.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor lari, melatih kecepatan dan kerjasama. Anak berlari mengambil egg yang diganti dengan bola didalam keranjang menaruh diatas sarang/cone.",
     "alat": ["Cone mangkuk", "Peluit", "Bola kecil", "Ember/keranjang"],
     "praktik": [
@@ -331,11 +333,11 @@ const part5 = [
       "Setelah itu anak berikutnya berlari seperti yang dilakukan anak pertama mengambil bola dan menaruhnya dicone pertama begitu seterusnya hingga semua cone terisi bola",
       "Kelompok yang paling dahulu menyelesaikan dengan menaruh bola pada setiap cone maka kelopmpok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Hai Bilah-Bilah Bambu",
-    "gambar": null,
+    "gambar": baseImage + "hai_bilah_bilah_bambu.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor berjalan, non lokomotor menekuk, melatih keseimbangan.",
     "alat": ["Bilah bambu", "Peluit", "Cone mangkuk"],
     "praktik": [
@@ -346,11 +348,11 @@ const part5 = [
       "Begitu seterusnya hingga cone semua berpindah",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Jembatan berkelok",
-    "gambar": null,
+    "gambar": baseImage + "jembatan_berkelok.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor berjalan, melatih keseimbangan.",
     "alat": ["Bilah bambu", "Peluit", "Cone mangkuk"],
     "praktik": [
@@ -360,11 +362,11 @@ const part5 = [
       "Setelah itu anak melangkahi rintangan yang disusun sampai ujung",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Kain melayang",
-    "gambar": null,
+    "gambar": baseImage + "kain_melayang.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor lompat hooping, melatih keseimbangan, koordinasi dan kerjasama.",
     "alat": ["Bilah bambu", "Peluit", "Lingkaran selang", "Kain"],
     "praktik": [
@@ -376,11 +378,11 @@ const part5 = [
       "Anak terakhir meletakkan kain yang dibawa kedalam lingkaran selang",
       "Kelompok yang paling dahulu menyelesaikan tugasnya maka kelopmpok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Planket (Plank estafet)",
-    "gambar": null,
+    "gambar": baseImage + "plank_estafet.png",
     "tujuan": "aktivitas ini bertujuan untuk kebugaran jasmani plank melatih kekuatan otot perut dan Kerjasama.",
     "alat": ["Cone mangkuk", "Peluit", "Lingkaran selang"],
     "praktik": [
@@ -391,14 +393,14 @@ const part5 = [
       "Sampai semua cone berpindah ke orang terakhir anak tetap pada posisi plank",
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   }
 ];
 
 const part6 = [
   {
     "aktivitas": "SI PUS (Sit Up Plus)",
-    "gambar": null,
+    "gambar": baseImage + "sit_up_plus.png",
     "tujuan": "aktivitas ini bertujuan untuk kebugaran jasmani sit up melatih kekuatan otot perut.",
     "alat": ["Cone", "Peluit", "Lingkaran selang"],
     "praktik": [
@@ -408,11 +410,11 @@ const part6 = [
       "Begitu seterusnya sampai semua lingkaran dan cone berpindah",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Si berani (Sit up berantai)",
-    "gambar": null,
+    "gambar": baseImage + "sit_up_berantai.png",
     "tujuan": "aktivitas ini bertujuan untuk kebugaran jasmani sit up melatih kekuatan otot perut dan Kerjasama.",
     "alat": ["Cone kerucut", "Peluit", "Lingkaran selang"],
     "praktik": [
@@ -423,11 +425,11 @@ const part6 = [
       "Sampai semua cone berpindah semua ke orang terakhir",
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Dragon Walk",
-    "gambar": null,
+    "gambar": baseImage + "dragon_walk.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor berjalan dan kerjasama.",
     "alat": ["Cone", "Peluit", "Bola kecil", "Keranjang/ember"],
     "praktik": [
@@ -437,11 +439,11 @@ const part6 = [
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya",
       "Halangan atau rintangan bisa ditambah dengan anak melangkah melompati rintangan"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Spider Walk",
-    "gambar": null,
+    "gambar": baseImage + "spider_walk.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih kebugaran jasmani terkait keuatan otot lengan.",
     "alat": ["Bilah bambu", "Peluit", "Cone mangkuk"],
     "praktik": [
@@ -451,11 +453,11 @@ const part6 = [
       "Anak selanjutnya dengan posisi yang sama memindahkan cone dari bawah keatas selang seling dengan anak selanjutnya",
       "Kelompok yang terlebih dahulu menyelesaikan tugasnya maka kelompok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Jumcir (Jump Circle)",
-    "gambar": null,
+    "gambar": baseImage + "jump_circle.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor, non lokomotor melatih kekuatan otot kaki.",
     "alat": ["Hula Hop", "Peluit", "Cone"],
     "praktik": [
@@ -465,14 +467,14 @@ const part6 = [
       "Begitu seterusnya hingga sampai finish",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   }
 ];
 
 const part7 = [
   {
     "aktivitas": "Kemidi Putar",
-    "gambar": null,
+    "gambar": baseImage + "kemidi_putar.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih gerak dasar melompat, berputar, menekuk dan gerak dasar manipulatif.",
     "alat": ["Bola kecil", "Peluit", "Hula hop atau lingkaran"],
     "praktik": [
@@ -481,11 +483,11 @@ const part7 = [
       "Setelah itu anak memindahkan bola kebelakang dengan melompat berputar 180 derajat dan berputar lagi untuk mengambil bola selanjutnya hingga semua berpindah",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "PC Ball (Push up Control Ball)",
-    "gambar": null,
+    "gambar": baseImage + "push_up_control_ball.png",
     "tujuan": "aktivitas ini bertujuan untuk gerak manipulative dan melatih kekuatan otot lengan.",
     "alat": ["Bola", "Peluit"],
     "praktik": [
@@ -495,11 +497,11 @@ const part7 = [
       "Hal ini dilakukan selama 1 menit",
       "Waktu bisa ditambah sesuai kebutuhan"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Bola keseimbangan",
-    "gambar": null,
+    "gambar": baseImage + "bola_keseimbangan.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih gerak dasar nonlokomotor, gerak dasar manipulative, keseimbangan dan koordinasi.",
     "alat": ["Bola kecil", "Stopwatch", "Peluit"],
     "praktik": [
@@ -509,11 +511,11 @@ const part7 = [
       "Setelah itu anak berganti kaki kiri atau kaki selanjutnya untuk melakukan sikap kapal terbang",
       "Dan juga berganti tangan untuk melakukan pantulan bola"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Cone ball Throw 1",
-    "gambar": null,
+    "gambar": baseImage + "cone_ball_throw_1.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih gerak dasar manipulatf melempar dan koordinasi mata tangan.",
     "alat": ["Bola kecil", "Peluit", "Cone kerucut"],
     "praktik": [
@@ -523,11 +525,11 @@ const part7 = [
       "Lakukan selama 1 menit",
       "Setelah itu berganti dengan tangan satunya lagi"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Cone ball Throw 2",
-    "gambar": null,
+    "gambar": baseImage + "cone_ball_throw_2.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih gerak dasar manipulatf melempar dan koordinasi mata tangan.",
     "alat": ["Bola kecil", "Peluit", "Cone kerucut"],
     "praktik": [
@@ -537,14 +539,14 @@ const part7 = [
       "Lakukan selama 1 menit",
       "Setelah itu berganti dengan tangan satunya lagi"
     ],
-    "video": null
+    "video": baseImage
   }
 ];
 
 const part8 = [
   {
     "aktivitas": "Cone ball Throw 3",
-    "gambar": null,
+    "gambar": baseImage + "cone_ball_throw_3.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih gerak dasar manipulatf melempar dan koordinasi mata tangan.",
     "alat": ["Bola kecil", "Peluit", "Cone kerucut", "Bilah bambu"],
     "praktik": [
@@ -555,11 +557,11 @@ const part8 = [
       "Lakukan selama 1 menit",
       "Setelah itu berganti dengan tangan satunya lagi"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Throw ball hula hop 1",
-    "gambar": null,
+    "gambar": baseImage + "throw_ball_1.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor berlari, melompat dan gerak manipulatif melempar.",
     "alat": ["Hula hop", "Bola kecil", "Bilah bambu", "Keranjang/ember"],
     "praktik": [
@@ -570,11 +572,11 @@ const part8 = [
       "Jarak lemparan 1,5 meter",
       "Apabila bola berhasil masuk anak kembali lagi kekelompoknya, apabila bola tidak masuk maka anak melakukan jumping jack sebanyak 5 kali dan memasukkan bola kembali keranjang"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Throw ball hula hop 2",
-    "gambar": null,
+    "gambar": baseImage + "throw_ball_2.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor berlari, melompat dan gerak manipulatif melempar.",
     "alat": ["Hula hop", "Bola kecil", "Bilah bambu", "Keranjang/ember"],
     "praktik": [
@@ -587,11 +589,11 @@ const part8 = [
       "Setelah kembali kekelompoknya anak selanjutnya melakukan hal yang sama seperti anak pertama",
       "Kelompok yang terlebih dahulu menyelesaikan tugasnya memasukkan bola semua kedalam lingkaran maka kelompok tersebut pemenangnya"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Throw ball hula hop 3",
-    "gambar": null,
+    "gambar": baseImage + "throw_ball_3.png",
     "tujuan": "aktivitas ini bertujuan untuk membiasakan gerak lokomotor berlari, melompat dan gerak manipulatif melempar.",
     "alat": ["Hula hop", "Bola kecil", "Bilah bambu", "Keranjang/ember"],
     "praktik": [
@@ -602,11 +604,11 @@ const part8 = [
       "Jarak lemparan 1 meter",
       "Apabila bola berhasil masuk anak kembali lagi kekelompoknya, apabila bola tidak masuk maka anak melakukan jumping jack sebanyak 5 kali dan memasukkan bola kembali keranjang"
     ],
-    "video": null
+    "video": baseImage
   },
   {
     "aktivitas": "Bola Mondar-Mandir",
-    "gambar": null,
+    "gambar": baseImage + "bola_mondar_mandir.png",
     "tujuan": "aktivitas ini bertujuan untuk melatih kelincahan.",
     "alat": ["Bola kecil", "Cone"],
     "praktik": [
@@ -615,7 +617,7 @@ const part8 = [
       "Lakukan hal tersebut selama 1 menit",
       "Setelah itu bergantian dengan anak berikutnya"
     ],
-    "video": null
+    "video": baseImage
   }
 ];
 
@@ -629,3 +631,5 @@ const all = [
   ...part7,
   ...part8
 ];
+
+const penghargaan = ["🥉","🥈","🥇","🏆"];
