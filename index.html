@@ -442,7 +442,7 @@
       border: 15px solid #ffa500; /* Tepi luar Oranye */
       max-width: 350px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 90%;
+      width: 100%;
     }
 
     .progress-title-wrapper {
@@ -876,6 +876,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-align: center;
       width: 100%;
       transition: 0.5s;
       margin: 1em auto;
@@ -887,10 +889,6 @@
 
     .datadiri-card div p span {
       color: #222;
-    }
-
-    .datadiri div .text-left {
-      text-align: left;
     }
 
 
@@ -1293,8 +1291,8 @@
           </div>
           <div>
             <p>Data Pencapaian dan Aktivitas Siswa</p>
-            <p class="text-left">Total Aktivitas : <span id="totalAktivitas">0</span></p>
-            <p class="text-left">Total Pelaksanaan : <span id="totalPelaksanaan">0</span></p>
+            <p>Total Aktivitas : <span id="totalAktivitas">0</span></p>
+            <p>Total Pelaksanaan : <span id="totalPelaksanaan">0</span></p>
             <div id="penghargaan">
 
             </div>
@@ -1385,17 +1383,17 @@
           tmp = JSON.stringify(tmp)
           localStorage.setItem('fun-badge', tmp);
         }
-        else if(tmp.length == 1 && nilai >= 100){
+        else if(tmp.length == 1 && nilai >= 200){
           tmp[tmp.length] = penghargaan[tmp.length];
           tmp = JSON.stringify(tmp)
           localStorage.setItem('fun-badge', tmp);
         }
-        else if(tmp.length == 2 && nilai >= 100){
+        else if(tmp.length == 2 && nilai >= 300){
           tmp[tmp.length] = penghargaan[tmp.length];
           tmp = JSON.stringify(tmp)
           localStorage.setItem('fun-badge', tmp);
         }
-        else if(tmp.length == 3 && nilai >= 100){
+        else if(tmp.length == 3 && nilai >= 400){
           tmp[tmp.length] = penghargaan[tmp.length];
           tmp = JSON.stringify(tmp)
           localStorage.setItem('fun-badge', tmp);
@@ -1411,8 +1409,8 @@
       function writeBadge(){
         let tmp = getBadge(); //sudah diparse ternyata
         if(tmp !== ""){
-          console.log(typeof tmp)
-          console.log(tmp)
+          //console.log(typeof tmp)
+          //console.log(tmp)
           //tmp = JSON.parse(tmp);
           tmp = tmp.join('');
           document.getElementById('penghargaan').textContent = tmp;
@@ -1489,12 +1487,12 @@
             scales: {
               y: {
                 beginAtZero: true,
-                display: false, 
-                grid: { display: false }
+                display: true, 
+                grid: { display: true }
               },
               x: {
                 grid: { display: false },
-                border: { display: false }
+                border: { display: false },
               }
             },
             plugins: {
@@ -1716,6 +1714,7 @@
       console.log(typeof tmpData)
 
       localStorage.setItem('dataProgress', tmpData);
+      alert('aktivitas kamu sudah tersimpan, periksa menu Progress untuk melihat hasilnya');
 
     }
 
@@ -1760,6 +1759,7 @@
       else {
         document.getElementById('totalAktivitas').textContent = total + " kali gerakan";
         document.getElementById('totalPelaksanaan').textContent = dataProgress.length + " kali pelaksanaan.";
+        writeBadge();
       }
 
     }
@@ -1827,7 +1827,7 @@
       btnYes.onclick = () => {
         //alert("🎵 Musik latar diputar!");
         playMusik();
-        musik.checked;
+        //musik.checked;
         overlay.remove();
     // Contoh: play musik di sini
     // document.getElementById("bgMusic").play();
