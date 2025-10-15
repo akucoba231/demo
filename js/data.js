@@ -1,4 +1,5 @@
 let baseImage = "./images/";
+let baseVideo = "./videos/berlari.mp4";
 
 const part1 = [
   {
@@ -15,7 +16,7 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak kembali lagi sampai ke garis start"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Tarik Bajai 2",
@@ -31,7 +32,7 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Dan anak yang melakukan kembali lagi menuju garis start"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Tarik Bajai 3",
@@ -47,7 +48,7 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak melakukan aktivitas tersebut hingga kembali lagi sampai ke garis start"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Tarik Bajai 4",
@@ -63,7 +64,7 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak kembali lagi sampai ke garis start"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Tarik Bajai 5",
@@ -79,7 +80,7 @@ const part1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak yang melakukan aktivitas tersebut kembali lagi sampai hingga ke garis start"
     ],
-    "video": baseImage
+    "video": baseVideo
   }
 ];
 
@@ -98,7 +99,7 @@ const part2 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak kembali lagi sampai ke garis start"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Tarik Bajai 7",
@@ -114,7 +115,7 @@ const part2 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian bertukar posisi",
       "Anak kembali lagi sampai ke garis start"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Tongkat sang raja",
@@ -130,7 +131,7 @@ const part2 = [
       "Waktu yang diberikan selama 30 detik",
       "Setelah waktu selesai ditandai dengan bunyi pluit peserta melaporkan jumlah berapa kali ia mampu memegang cone tersebut setelah itu berganti posisi"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Tongkat sang raja (variasi 1)",
@@ -147,7 +148,7 @@ const part2 = [
       "Waktu yang diberikan selama 30 detik",
       "Setelah waktu selesai ditandai dengan bunyi pluit peserta melaporkan jumlah berapa kali ia mampu memegang cone tersebut setelah itu berganti posisi"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Tongkat sang raja (variasi 2)",
@@ -164,7 +165,7 @@ const part2 = [
       "Waktu yang diberikan selama 1 menit",
       "Setelah waktu selesai ditandai dengan bunyi pluit peserta melaporkan jumlah berapa kali ia mampu memegang cone tersebut setelah itu berganti posisi"
     ],
-    "video": baseImage
+    "video": baseVideo
   }
 ];
 
@@ -183,7 +184,7 @@ const part3 = [
       "Waktu yang diberikan selama 1 menit",
       "Setelah waktu selesai ditandai dengan bunyi pluit peserta melaporkan jumlah berapa kali ia mampu mengangkat lutut dan kakinya setelah itu berganti posisi"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Bolkat (Boling Angkat Kaki Lutut)",
@@ -197,7 +198,7 @@ const part3 = [
       "Guru memberi aba start dengan menggunakan peluit dan sambil menjalankan stopwatch, untuk menandai awal dan berakhirnya permainan",
       "Setelah waktu selesai ditandai dengan bunyi pluit catat skore yang diperoleh dan berganti posisi"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Run Touch",
@@ -210,7 +211,7 @@ const part3 = [
       "Anak yang lainnya ada yang menghitung dan mencatat berapa kali anak yang berlari dapat menyentuh cone",
       "Setelah music berhenti, anak berhenti juga berlarinya. Setelah itu bergantian dengan yang tadi mencatat"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Lajeslow (lari jalan cepat slow)",
@@ -222,7 +223,7 @@ const part3 = [
       "Apabila music berbunyi dengan beet cepat anak berlari dan music dengan beet slow anak berjalan mengelilingi lapangan",
       "Aktivitas ini dilakukan selama 5 menit"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Suit-suit Hore",
@@ -239,7 +240,7 @@ const part3 = [
       "Selanjutnya seperti itu sampai cone habis",
       "Kelompok yang mengumpulkan cone paling banyak maka kelompok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   }
 ];
 
@@ -259,7 +260,7 @@ const part4 = [
       "Selanjutnya seperti itu sampai cone habis",
       "Kelompok yang mengumpulkan cone paling banyak maka kelompok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Jalur Rahasia",
@@ -274,7 +275,7 @@ const part4 = [
       "Apabila anak gagal, bergantian dengan anak berikutnya",
       "Anak dikatakan berhasil apabila melewati jalur rahasia tanpa ada lingkaran yang terlewat atau dilalui lebih dari satu kali"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Jalur Rahasia (variasi 1)",
@@ -289,7 +290,7 @@ const part4 = [
       "Apabila anak gagal, bergantian dengan anak berikutnya",
       "Anak dikatakan berhasil apabila melewati jalur rahasia tanpa ada lingkaran yang terlewat atau dilalui lebih dari satu kali"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Egg Run",
@@ -302,7 +303,7 @@ const part4 = [
       "Anak berikutnya berlari untuk mengambil bola dan menaruhnya diatas cone berikutnya",
       "Kelompok yang paling dahulu menyelesaikan dengan menaruh bola pada setiap cone maka kelopmpok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Egg Run (variasi 1)",
@@ -316,7 +317,7 @@ const part4 = [
       "Anak berikutnya berlari seperti anak pertama dan mengambil bola dan menaruhnya diatas cone",
       "Kelompok yang paling dahulu menyelesaikan dengan menaruh bola pada setiap cone maka kelompok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   }
 ];
 
@@ -333,7 +334,7 @@ const part5 = [
       "Setelah itu anak berikutnya berlari seperti yang dilakukan anak pertama mengambil bola dan menaruhnya dicone pertama begitu seterusnya hingga semua cone terisi bola",
       "Kelompok yang paling dahulu menyelesaikan dengan menaruh bola pada setiap cone maka kelopmpok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Hai Bilah-Bilah Bambu",
@@ -348,7 +349,7 @@ const part5 = [
       "Begitu seterusnya hingga cone semua berpindah",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Jembatan berkelok",
@@ -362,7 +363,7 @@ const part5 = [
       "Setelah itu anak melangkahi rintangan yang disusun sampai ujung",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Kain melayang",
@@ -378,7 +379,7 @@ const part5 = [
       "Anak terakhir meletakkan kain yang dibawa kedalam lingkaran selang",
       "Kelompok yang paling dahulu menyelesaikan tugasnya maka kelopmpok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Planket (Plank estafet)",
@@ -393,7 +394,7 @@ const part5 = [
       "Sampai semua cone berpindah ke orang terakhir anak tetap pada posisi plank",
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   }
 ];
 
@@ -410,7 +411,7 @@ const part6 = [
       "Begitu seterusnya sampai semua lingkaran dan cone berpindah",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Si berani (Sit up berantai)",
@@ -425,7 +426,7 @@ const part6 = [
       "Sampai semua cone berpindah semua ke orang terakhir",
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Dragon Walk",
@@ -439,7 +440,7 @@ const part6 = [
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya",
       "Halangan atau rintangan bisa ditambah dengan anak melangkah melompati rintangan"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Spider Walk",
@@ -453,7 +454,7 @@ const part6 = [
       "Anak selanjutnya dengan posisi yang sama memindahkan cone dari bawah keatas selang seling dengan anak selanjutnya",
       "Kelompok yang terlebih dahulu menyelesaikan tugasnya maka kelompok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Jumcir (Jump Circle)",
@@ -467,7 +468,7 @@ const part6 = [
       "Begitu seterusnya hingga sampai finish",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   }
 ];
 
@@ -483,7 +484,7 @@ const part7 = [
       "Setelah itu anak memindahkan bola kebelakang dengan melompat berputar 180 derajat dan berputar lagi untuk mengambil bola selanjutnya hingga semua berpindah",
       "Anak yang terlebih dahulu menyelesaikan tugasnya maka anak tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "PC Ball (Push up Control Ball)",
@@ -497,7 +498,7 @@ const part7 = [
       "Hal ini dilakukan selama 1 menit",
       "Waktu bisa ditambah sesuai kebutuhan"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Bola keseimbangan",
@@ -511,7 +512,7 @@ const part7 = [
       "Setelah itu anak berganti kaki kiri atau kaki selanjutnya untuk melakukan sikap kapal terbang",
       "Dan juga berganti tangan untuk melakukan pantulan bola"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Cone ball Throw 1",
@@ -525,7 +526,7 @@ const part7 = [
       "Lakukan selama 1 menit",
       "Setelah itu berganti dengan tangan satunya lagi"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Cone ball Throw 2",
@@ -539,7 +540,7 @@ const part7 = [
       "Lakukan selama 1 menit",
       "Setelah itu berganti dengan tangan satunya lagi"
     ],
-    "video": baseImage
+    "video": baseVideo
   }
 ];
 
@@ -557,7 +558,7 @@ const part8 = [
       "Lakukan selama 1 menit",
       "Setelah itu berganti dengan tangan satunya lagi"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Throw ball hula hop 1",
@@ -572,7 +573,7 @@ const part8 = [
       "Jarak lemparan 1,5 meter",
       "Apabila bola berhasil masuk anak kembali lagi kekelompoknya, apabila bola tidak masuk maka anak melakukan jumping jack sebanyak 5 kali dan memasukkan bola kembali keranjang"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Throw ball hula hop 2",
@@ -589,7 +590,7 @@ const part8 = [
       "Setelah kembali kekelompoknya anak selanjutnya melakukan hal yang sama seperti anak pertama",
       "Kelompok yang terlebih dahulu menyelesaikan tugasnya memasukkan bola semua kedalam lingkaran maka kelompok tersebut pemenangnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Throw ball hula hop 3",
@@ -604,7 +605,7 @@ const part8 = [
       "Jarak lemparan 1 meter",
       "Apabila bola berhasil masuk anak kembali lagi kekelompoknya, apabila bola tidak masuk maka anak melakukan jumping jack sebanyak 5 kali dan memasukkan bola kembali keranjang"
     ],
-    "video": baseImage
+    "video": baseVideo
   },
   {
     "aktivitas": "Bola Mondar-Mandir",
@@ -617,7 +618,7 @@ const part8 = [
       "Lakukan hal tersebut selama 1 menit",
       "Setelah itu bergantian dengan anak berikutnya"
     ],
-    "video": baseImage
+    "video": baseVideo
   }
 ];
 
