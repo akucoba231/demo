@@ -1094,7 +1094,7 @@
         <h2 id="materiJudul"></h2>
         <p id="materiDeskripsi"></p>
         <video id="materiVideo" controls>
-          
+
         </video>
         <p>Alat yang dibutuhkan</p>
         <ol type="a" id="alat"></ol>
@@ -1641,6 +1641,23 @@
       source.src = data.video;
       source.type = "video/mp4";
       vidWrap.appendChild(source);
+      // Ketika vidWrap mulai diputar
+      vidWrap.addEventListener('play', () => {
+        stopMusik();
+      });
+
+  // Ketika vidWrap dijeda
+      vidWrap.addEventListener('pause', () => {
+    // Cegah auto-play kalau vidWrap baru saja selesai
+        if (!vidWrap.ended) {
+          playMusik()
+        }
+      });
+
+  // Ketika vidWrap selesai
+      vidWrap.addEventListener('ended', () => {
+        playMusik()
+      });
 
       // ul alat
       let alat = document.getElementById("alat");
@@ -1843,7 +1860,10 @@
     // document.getElementById("bgMusic").play();
       };
 
-      btnNo.onclick = () => overlay.remove();
+      btnNo.onclick = () => {
+        musik.click();
+        overlay.remove();
+      }
 
   // Masukkan tombol ke modal
       modal.appendChild(btnYes);
