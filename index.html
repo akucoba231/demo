@@ -368,7 +368,7 @@
       text-align: center;
     }
 
-    #detailMateri img {
+    #detailMateri img, #detailMateri video {
       width: 90%;
       margin: 1em auto;
       border-radius: 12px;
@@ -1093,6 +1093,9 @@
         <img id="materiGambar" src="" alt="Gambar Materi">
         <h2 id="materiJudul"></h2>
         <p id="materiDeskripsi"></p>
+        <video id="materiVideo" controls>
+          
+        </video>
         <p>Alat yang dibutuhkan</p>
         <ol type="a" id="alat"></ol>
         <p>Cara melakukan</p>
@@ -1632,6 +1635,13 @@
         document.getElementById("materiGambar").style.display = "none";
       }
       document.getElementById("materiDeskripsi").textContent = data.tujuan;
+      // ul video
+      let vidWrap = document.getElementById('materiVideo');
+      let source = document.createElement('source');
+      source.src = data.video;
+      source.type = "video/mp4";
+      vidWrap.appendChild(source);
+
       // ul alat
       let alat = document.getElementById("alat");
       alat.innerHTML = data.alat.map( m => `
