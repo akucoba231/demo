@@ -1327,7 +1327,7 @@
         <!-- Navigasi bawah (tiga tombol) -->
         <div class="navigasi">
           <button onclick="sebelumnya()">◀ Sebelumnya</button>
-          <button class="home-btn" onclick="showPage('dashboard')">🏠 Kembali ke Dashboard</button>
+          <button class="home-btn" onclick="pre_showPage('dashboard')">🏠 Kembali ke Dashboard</button>
           <button onclick="selanjutnya()">Selanjutnya ▶</button>
         </div>
       </section>
@@ -1638,7 +1638,7 @@
         if(tmp === ""){
           tmp = []
         }
-        console.log(tmp.length)
+        //console.log(tmp.length)
         
         if(tmp.length == 0 && nilai >= 100){
           tmp[tmp.length] = penghargaan[tmp.length];
@@ -1769,7 +1769,7 @@
       // start of bantuan navigasi 
       function toTop(id){
         //console.log("totop s" + id)
-        if(id != "aktivitas"){
+        if(id != "aktivitas" || id != "dashboard"){
           document.getElementById(id).scrollTo({
             "top" : 0,
             "left" : 0,
@@ -1800,6 +1800,7 @@
             }
           }
           renderAktivitas();
+          updateMateri(current, "kanan");
         }
         else if (id === "progress") {
           if(localStorage.getItem(funDataProgress) == undefined){
@@ -1837,6 +1838,12 @@
             initDataDiri();
           }
         }
+      }
+
+      function pre_showPage(home){
+        current = 0;
+        tmpVideo = 0;
+        showPage(home);
       }
     // end of navigasi
 
@@ -1890,12 +1897,12 @@
         let aktifMat = document.querySelector('.materi-item');
         aktifMat.classList.add('aktif')
 items = document.querySelectorAll('.materi-item');
-console.log(items)
+//console.log(items)
       }
       
-      let current = 0;
+let current = 0;
 let items = []
-console.log(items)
+//console.log(items)
 
 function updateMateri(newIndex, arah = 'kanan') {
   if (newIndex < 0 || newIndex >= items.length) return;
@@ -1926,18 +1933,27 @@ function selanjutnya() {
   updateMateri(current + 1, 'kanan');
 }
 
+function jumpMateri(id){
+  for(let i = 0; i < id; ++i){
+    selanjutnya();
+  }
+}
+
 let tmpVideo;
+let tmpAktivitas;
+
       function openMateri(id) {
-        document.getElementById('detailMateri').scrollTo({
-          "top": 0,
-          "left": 0,
-          "behavior": "smooth"
-      }); // agar ke atas
+        tmpAktivitas = id;
+      //   document.getElementById('detailMateri').scrollTo({
+      //     "top": 0,
+      //     "left": 0,
+      //     "behavior": "smooth"
+      // }); // agar ke atas
       const data = all[id]; //materiData.find(m => m.id === id);
       document.getElementById("materiJudul").textContent = data.aktivitas;
       if(data.gambar != null){
         document.getElementById("materiGambar").src = data.gambar;
-        console.log(data.gambar);
+        //console.log(data.gambar);
       }
       else {
         document.getElementById("materiGambar").style.display = "none";
@@ -1946,10 +1962,14 @@ let tmpVideo;
       // ul video
       let vidWrap = document.getElementById('materiVideo');
       let source = document.createElement('source');
+      if(data.video == ""){
+        data.video = baseVideo + "old_jembatan_berkelok.mp4";
+      }
       source.src = data.video;
       source.type = "video/mp4";
+      vidWrap.innerHTML = ""; //untuk reset video
       vidWrap.appendChild(source);
-      
+      vidWrap.load()
       tmpVideo = vidWrap;
       // Ketika vidWrap mulai diputar
       vidWrap.addEventListener('play', () => {
@@ -2044,7 +2064,7 @@ let tmpVideo;
         alert('Silakan isi data diri dulu ya');
         showPage('main')
       }
-      console.log(profil)
+      //console.log(profil)
 
       data["nama"] = profil;
 
@@ -2061,12 +2081,12 @@ let tmpVideo;
       let tmp = data["timestamp"];
       data["timestamp"] = getWaktu(tmp);
       formNode.reset();
-      console.log(data);
+      //console.log(data);
 
       dataProgress[dataProgress.length] = data;
       let tmpData = JSON.stringify(dataProgress);
-      console.log(tmpData);
-      console.log(typeof tmpData)
+      //console.log(tmpData);
+      //console.log(typeof tmpData)
 
       localStorage.setItem(funDataProgress, tmpData);
       alert('aktivitas kamu sudah tersimpan, periksa menu Progress untuk melihat hasilnya');
@@ -2081,7 +2101,7 @@ let tmpVideo;
     let time = document.getElementById('timestamp');
     time.onchange = (e) =>{
       let value = e.target.value
-      console.log(value)
+      //console.log(value)
       let t = getWaktu(value) //timestamp
       
       // hari
@@ -2110,7 +2130,7 @@ let tmpVideo;
 
     function initDataDiri(){
       let diri = getDataDiri(); //nama, umur, kelas, sekolah, hobi
-      console.log(diri);
+      //console.log(diri);
       //let el = ["Nama","Umur","Kelas","Sekolah","Hobi"];
       let el = ["Nama","Kelas","Umur"];
       el.forEach((item)=>{
@@ -2211,7 +2231,9 @@ let tmpVideo;
       };
 
       btnNo.onclick = () => {
-        musik.click();
+        if(musik.checked){
+          musik.click();
+        }
         overlay.remove();
       }
 
@@ -2231,7 +2253,7 @@ let tmpVideo;
     function playMusik(){
       loadMusik.currentTime = 0; // mulai dari awal
       loadMusik.play().catch(err => {
-        console.warn("Autoplay diblokir, user perlu interaksi:", err);
+        //console.warn("Autoplay diblokir, user perlu interaksi:", err);
       });
 
       // Jika musik berakhir, putar lagi (loop manual)
@@ -2250,12 +2272,12 @@ let tmpVideo;
     let musik = document.getElementById('musiklatar');
     musik.addEventListener('change',(e)=>{
       if(e.target.checked){
-        console.log(true);
+        //console.log(true);
         playMusik();
       }
       else
       {
-        console.log(false);
+        //console.log(false);
         stopMusik();
       }
     })
