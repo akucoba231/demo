@@ -180,7 +180,7 @@ const new3 = [
       "Anak pertama setelah estafet ring, kembali untuk mengambil ring berikutnya, hingga semua ring pindah ke lingkaran dekat orang terakhir.",
       "Kelompok yang paling dahulu menyelesaikan tugasnya maka kelompok tersebut pemenangnya."
     ],
-    video: baseVideo + "old_run_touch.mp4" //"flying_ring.mp4",
+    video: baseVideo + /*"old_run_touch.mp4"*/ "flying_ring.mp4",
   },
   {
     aktivitas: "Si Berani (Sit up Berantai)",
@@ -209,7 +209,7 @@ const new3 = [
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya.",
       "Halangan atau rintangan bisa ditambah dengan anak melangkah melompati rintangan."
     ],
-    video: baseVideo + "old_run_touch.mp4" //"dragon_walk.mp4",
+    video: baseVideo + /*"old_run_touch.mp4" */ "dragon_walk.mp4",
   },
   {
     aktivitas: "Spider Walk",
@@ -270,7 +270,7 @@ const new4 = [
       "Anak berjalan sambil lempar tangkap bola dari titik start/awal menuju ujung batas cone dan kembali lagi ketitik awal.",
       "Setelah itu berganti dengan tangan satunya lagi."
     ],
-    video: baseVideo + "old_run_touch.mp4" //"ball_throw_move.mp4",
+    video: baseVideo + /*"old_run_touch.mp4"*/ "ball_throw_move.mp4",
   },
   {
     aktivitas: "Cone Ball Throw",
@@ -285,7 +285,7 @@ const new4 = [
       "Lakukan selama 1 menit.",
       "Setelah itu berganti dengan tangan satunya lagi."
     ],
-    video: baseVideo + "old_run_touch.mp4" // "cone_ball_throw.mp4",
+    video: baseVideo + /*"old_run_touch.mp4"*/  "cone_ball_throw.mp4",
   },
   {
     aktivitas: "Planket (Plank Estafet)",
