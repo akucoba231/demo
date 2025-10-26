@@ -1,5 +1,5 @@
 let baseImage = "./imagesNew/";
-let baseVideo = "./videosNew/";
+let baseVideo = "./videosEdited/";
 
 const new1 = [
   {
@@ -16,7 +16,7 @@ const new1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian  bertukar posisi.",
       "Anak kembali lagi sampai ke garis start."
     ],
-    video: baseVideo + "tarik_bajai.mp4",
+    video: baseVideo + "Old_tarik_bajai.mp4",
   },
   {
     aktivitas: "Tongkat Sang Raja",
@@ -32,7 +32,7 @@ const new1 = [
       "Waktu yang diberikan selama 60 detik.",
       "Setelah waktu selesai ditandai dengan bunyi pluit anak yang menghitung melaporkan jumlah berapa kali temannya mampu memegang cone tersebut, setelah itu berganti posisi."
     ],
-    video: baseVideo + "tongkat_sang_raja.mp4",
+    video: baseVideo + "Old_tongkat_sang_raja.mp4",
   },
   {
     aktivitas: "ADUK",
@@ -79,7 +79,7 @@ const new1 = [
       "Setelah music berhenti, anak berhenti juga aktivitasnya.",
       "Setelah itu bergantian dengan yang tadi mencatat."
     ],
-    video: baseVideo + "old_run_touch.mp4" //"run_touch.mp4",
+    video: baseVideo + "run_touch.mp4",
   }
 ];
 
@@ -116,7 +116,7 @@ const new2 = [
       "Selanjutnya seperti itu sampai cone habis.",
       "Kelompok yang mengumpulkan cone paling banyak maka kelopmpok tersebut pemenangnya."
     ],
-    video: baseVideo + "old_suit_pintar.mp4" //"suit_pintar.mp4",
+    video: baseVideo + "suit_pintar.mp4",
   },
   {
     aktivitas: "Jalur Rahasia",
@@ -145,7 +145,7 @@ const new2 = [
       "Setelah itu anak berikutnya berlari seperti yang dilakukan anak pertama mengambil bola dan menaruhnya dicone pertama begitu seterusnya hingga semua cone terisi bola.",
       "Kelompok yang paling dahulu menyelesaikan dengan menaruh bola pada setiap cone maka kelopmpok tersebut pemenangnya."
     ],
-    video: baseVideo + "old_run_touch.mp4" //"egg_run.mp4",
+    video: baseVideo + "egg_run.mp4",
   },
   {
     aktivitas: "Jembatan Berkelok",
@@ -161,7 +161,7 @@ const new2 = [
       "Jika ada cone yang terjatuh maka ia harus kembali kebaris paling belakang kelompoknya.",
       "Kelompok yang berhasil dan terlebih dahulu menyelesaikan tugasnya maka kelompok tersebut pemenangnya."
     ],
-    video: baseVideo + "old_jembatan_berkelok.mp4" //"jembatan_berkelok.mp4",
+    video: baseVideo + "jembatan_berkelok.mp4",
   }
 ];
 
@@ -180,7 +180,7 @@ const new3 = [
       "Anak pertama setelah estafet ring, kembali untuk mengambil ring berikutnya, hingga semua ring pindah ke lingkaran dekat orang terakhir.",
       "Kelompok yang paling dahulu menyelesaikan tugasnya maka kelompok tersebut pemenangnya."
     ],
-    video: baseVideo + /*"old_run_touch.mp4"*/ "flying_ring.mp4",
+    video: baseVideo + "flying_ring.mp4",
   },
   {
     aktivitas: "Si Berani (Sit up Berantai)",
@@ -195,7 +195,7 @@ const new3 = [
       "Sampai semua cone berpindah semua ke orang terakhir.",
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya."
     ],
-    video: baseVideo + "si_berani.mp4",
+    video: baseVideo + "Old_si_berani.mp4",
   },
   {
     aktivitas: "Dragon Walk",
@@ -209,7 +209,7 @@ const new3 = [
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya.",
       "Halangan atau rintangan bisa ditambah dengan anak melangkah melompati rintangan."
     ],
-    video: baseVideo + /*"old_run_touch.mp4" */ "dragon_walk.mp4",
+    video: baseVideo + "dragon_walk.mp4",
   },
   {
     aktivitas: "Spider Walk",
@@ -270,7 +270,7 @@ const new4 = [
       "Anak berjalan sambil lempar tangkap bola dari titik start/awal menuju ujung batas cone dan kembali lagi ketitik awal.",
       "Setelah itu berganti dengan tangan satunya lagi."
     ],
-    video: baseVideo + /*"old_run_touch.mp4"*/ "ball_throw_move.mp4",
+    video: baseVideo + "ball_throw_move.mp4",
   },
   {
     aktivitas: "Cone Ball Throw",
@@ -285,7 +285,7 @@ const new4 = [
       "Lakukan selama 1 menit.",
       "Setelah itu berganti dengan tangan satunya lagi."
     ],
-    video: baseVideo + /*"old_run_touch.mp4"*/  "cone_ball_throw.mp4",
+    video: baseVideo + "cone_ball_throw.mp4",
   },
   {
     aktivitas: "Planket (Plank Estafet)",
@@ -316,7 +316,7 @@ const new4 = [
       "Apabila bola berhasil masuk anak kembali lagi kekelompoknya, apabila bola tidak masuk maka anak melakukan jumping jack sebanyak 5 kali dan memasukkan bola kembali ketempat awal dan baris lagi dibelakang.",
       "Kelompok yang terlebih dahulu menyelesaikan maka kelompok tersebut pemenangnya."
     ],
-    video: baseVideo + "old_run_touch.mp4" //"throw_ball_sprint.mp4",
+    video: baseVideo + "throw_ball_sprint.mp4",
   }
 ]
 
