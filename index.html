@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script> 
   <style>
     /* Global Reset & Viewport Fix */
-       @font-face {
+    @font-face {
       font-family: 'Luckiest Guy';
       src: url('css/LuckiestGuy-Regular.ttf') format('truetype');
     }
@@ -24,7 +24,7 @@
       src: url('css/Nunito-ExtraLight.ttf') format('truetype');
     }
     
-     
+
     @font-face {
       font-family: "Nunito Bold";
       src: url('css/Nunito-Bold.ttf') format('truetype');
@@ -186,7 +186,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      }
+    }
     .header h2 {
       font-size: 1.8em;
       color: #3da9fc;
@@ -203,7 +203,7 @@
       margin: 0;
     }
     #main > .card input {
-        border: 1px solid #222;
+      border: 1px solid #222;
     }
     .card {
       background: rgba(255,255,255,0.2);
@@ -334,37 +334,37 @@
       display: none;
     }
 
-   #aktivitas .materi-list {
-   position: relative;
-    width: 100%;
-    height: calc(100vh - 70px); /* sisakan ruang untuk navigasi */
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 2.5em; /* agar tidak mentok atas */
-    
-    }
+    #aktivitas .materi-list {
+     position: relative;
+     width: 100%;
+     height: calc(100vh - 70px); /* sisakan ruang untuk navigasi */
+     perspective: 1000px;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     padding-top: 2.5em; /* agar tidak mentok atas */
 
-  #aktivitas .materi-item {
-   position: absolute;
-    width: 90%;
-    max-width: 600px;
-    height: 85%;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(90deg);
-    transform-origin: right;
-    backface-visibility: hidden;
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    opacity: 0;
-    }
-    
+   }
+
+   #aktivitas .materi-item {
+     position: absolute;
+     width: 90%;
+     max-width: 600px;
+     height: 85%;
+     background: white;
+     border-radius: 20px;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     transform: rotateY(90deg);
+     transform-origin: right;
+     backface-visibility: hidden;
+     transition: transform 0.6s ease, opacity 0.6s ease;
+     opacity: 0;
+   }
+
    #aktivitas .materi-item.aktif {
     transform: rotateY(0deg);
     opacity: 1;
@@ -391,32 +391,32 @@
     }
     */
 
-    @keyframes vibe {
-      0% {
-        transform: scale(1.1);
-      }
-      20% {
-        transform: scale(1.1) rotateZ(-15deg);
-      }
-      50% {
-        transform: scale(1.1) rotateZ(15deg);
-      }
-      80% {
-        transform: scale(1.1) rotateZ(-15deg);
-      }
-      100% {
-        transform: scale(1.0);
-      }
+  @keyframes vibe {
+    0% {
+      transform: scale(1.1);
     }
+    20% {
+      transform: scale(1.1) rotateZ(-15deg);
+    }
+    50% {
+      transform: scale(1.1) rotateZ(15deg);
+    }
+    80% {
+      transform: scale(1.1) rotateZ(-15deg);
+    }
+    100% {
+      transform: scale(1.0);
+    }
+  }
 
   #aktivitas .materi-item img {
-      width: 60%;
+    width: 60%;
     max-width: 250px;
     object-fit: contain;
     margin-bottom: 1em;
-    }
-    
- #aktivitas .materi-item h3 {
+  }
+
+  #aktivitas .materi-item h3 {
     font-size: 1.2em;
     color: #333;
     margin-bottom: 1.5em;
@@ -425,7 +425,7 @@
     font-weight: 600;
   }
   
-   #aktivitas .materi-item::after {
+  #aktivitas .materi-item::after {
     content: "Aktivitas " attr(data-index);
     position: absolute;
     bottom: 12px;
@@ -489,83 +489,83 @@
     background: #0b5ed7;
   }
 
-    /* ===== DETAIL MATERI ===== */
-    #detailMateri {
-      background: #DDF4E7;
-      padding: 1.5em;
-      text-align: center;
-    }
-    
-    #detailMateri > * {
-      width: 90%;
-      border-left: 5px solid #2196f3;
-    }
-    
-    #detailMateri > h2, #detailMateri ol {
-      border: none;
-    }
+  /* ===== DETAIL MATERI ===== */
+  #detailMateri {
+    background: #DDF4E7;
+    padding: 1.5em;
+    text-align: center;
+  }
 
-    #detailMateri img, #detailMateri video {
-    
-      margin: 1em auto;
-      border-radius: 12px;
-    }
-    
-    #detailMateri img {
-      transition: 0.5s;
-    }
-    #detailMateri img:hover {
-      transform: scale(1.2);
-    }
+  #detailMateri > * {
+    width: 90%;
+    border-left: 5px solid #2196f3;
+  }
 
-    #detailMateri h2 {
-      font-family: 'Luckiest Guy', Sans-Serif;
-      color: #3da9fc;
-    }
+  #detailMateri > h2, #detailMateri ol {
+    border: none;
+  }
 
-    #detailMateri p, #detailMateri ul, #detailMateri ol {
-      padding: 0.5em 0.5em 0.5em 1em;
-      border-radius: 15px;
-    }
-    #detailMateri p {
-      box-shadow: 1px 1px 2px #222;
-      background: #fefefe;
-      transition: 0.25s;
-    }
-    
-    #detailMateri p:hover {
-      transform: scale(1.1);
-      background: linear-gradient(45deg, #4a90e2, #42e695);
-      color: #fff;
-    }
-    /* new style ol */
-    #detailMateri ol {
-      counter-reset: step;
-      list-style: none;
-      padding: 0;
-      font-family: 'Nunito', sans-serif;
-    }
-    
-    #detailMateri ol li {
-      width: 100%;
-      counter-increment: step;
-      background: #fff;
-      border-radius: 12px;
-      margin: 10px auto;
-      padding: 15px 15px 15px 40px;
-      position: relative;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: 0.25s;
-    }
-    
-    #detailMateri ol li:hover {
-      transform: scale(1.1);
-      background: linear-gradient(45deg, #4a90e2, #42e695);
-      color: #fff;
-    }
-   
-    
-    #detailMateri ol li:before {
+  #detailMateri img, #detailMateri video {
+
+    margin: 1em auto;
+    border-radius: 12px;
+  }
+
+  #detailMateri img {
+    transition: 0.5s;
+  }
+  #detailMateri img:hover {
+    transform: scale(1.2);
+  }
+
+  #detailMateri h2 {
+    font-family: 'Luckiest Guy', Sans-Serif;
+    color: #3da9fc;
+  }
+
+  #detailMateri p, #detailMateri ul, #detailMateri ol {
+    padding: 0.5em 0.5em 0.5em 1em;
+    border-radius: 15px;
+  }
+  #detailMateri p {
+    box-shadow: 1px 1px 2px #222;
+    background: #fefefe;
+    transition: 0.25s;
+  }
+
+  #detailMateri p:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #4a90e2, #42e695);
+    color: #fff;
+  }
+  /* new style ol */
+  #detailMateri ol {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  #detailMateri ol li {
+    width: 100%;
+    counter-increment: step;
+    background: #fff;
+    border-radius: 12px;
+    margin: 10px auto;
+    padding: 15px 15px 15px 40px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.25s;
+  }
+
+  #detailMateri ol li:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #4a90e2, #42e695);
+    color: #fff;
+  }
+
+
+  #detailMateri ol li:before {
     content: counter(step);
     position: absolute;
     left: 5px;
@@ -579,595 +579,614 @@
     text-align: center;
     line-height: 24px;
     font-weight: bold;
-    }
-
-
-    #detailMateri p {
-      margin: 1em auto 0em auto;
-      width: 90%;
-      line-height: 1.4;
-      text-align: left;
-    }
-
-    #detailMateri ul, #detailMateri ol {
-      text-align: left;
-      width: 90%;
-      list-style-position: inside;
-      
-    }
-
-    #detailMateri button, .page button {
-      background: #3da9fc;
-      color: white;
-      padding: 0.5em 1.5em; /* Disesuaikan agar tidak terlalu besar */
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      /*font-weight: bold;*/
-      margin-top: 1em; 
-    }
-
-    .page .menu button {
-      background: #fff;
-      color: #222;
-    }
-
-    /* ===== HALAMAN LAIN (Progress) - BARU ===== */
-    #progress {
-      background-color: #ffd66d; /* Background Kuning/Oranye Terang */
-      padding: 1.5em;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #progress h2 {
-      display: none; /* Hapus h2 lama */
-    }
-
-    .progress-card {
-      background-color: white;
-      border-radius: 25px;
-      padding: 1.5em 1em;
-      border: 15px solid #ffa500; /* Tepi luar Oranye */
-      max-width: 350px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 100%;
-    }
-
-    .progress-title-wrapper {
-      margin-bottom: 20px;
-    }
-
-    .progress-title {
-      font-family: 'Luckiest Guy', cursive;
-      color: #222;
-      font-size: 1.8em;
-      text-align: center;
-    }
-
-    .chart-ring-wrapper {
-      width: 150px; /* Ukuran total chart ring */
-      height: 150px;
-      margin: 1em auto;
-      position: relative;
-    }
-
-    .chart-ring-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
-    .chart-ring-text .count {
-      font-size: 2em;
-      color: #3da9fc; /* Warna biru */
-      line-height: 1;
-    }
-
-    .total-point {
-      margin: 1.5em 0 1em;
-    }
-
-    .total-point .label {
-      font-size: 1em;
-      /*font-weight: bold;*/
-      color: #222;
-      opacity: 0.7;
-    }
-
-    .total-point .value {
-      font-size: 2.5em;
-      color: #ffa500; /* Warna oranye */
-      line-height: 1;
-    }
-
-    .chart-bar-wrapper {
-      width: 90%;
-      margin: 2em auto 1.5em;
-    }
-
-    .badge-list {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 1em;
-    }
-
-    .badge-item {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 3px solid #ffd60a; /* Contoh border lencana */
-    }
-
-    .badge-item img {
-      width: 60%;
-      height: 60%;
-      object-fit: contain;
-    }
-    
-    /* ===== PANDUAN BARU CSS ===== */
-    #panduan {
-      background-color: #6cdd6c; /* Background hijau */
-      padding: 1.5em; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start; 
-      font-weight: bold;
-    }
-
-    #panduan h2 {
-      display: block; /* Hapus h2 lama */
-      color: #fff;
-      text-shadow: 1px 1px 2px #222;
-      width: 90%;
-      size: 0.8em;
-    }
-
-    .panduan-card {
-      background-color: white;
-      border-radius: 20px; 
-      padding: 1em 0.5em;
-      border: 10px solid #6cdd6c; 
-      max-width: 350px; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 90%;
-      transition: 0.5s;
-      margin: 10px auto;
-    }
-
-    .panduan-card:hover {
-      transform: scale(1.05);
-    }
-
-    .panduan-card h3 {
-      text-align: center;
-      width: 80%;
-      padding-top: 0.5em;
-      padding-bottom: 1em;
-      margin-bottom: 1em;
-      border-bottom: 2px dashed #6cdd6c;
-    }
-
-    .panduan-title {
-      font-family: 'Luckiest Guy', cursive;
-      color: #222; 
-      font-size: 1.8em;
-      text-align: center;
-      line-height: 1.1;
-      margin-bottom: 0.5em;
-    }
-
-    .panduan-image {
-      width: 120px;
-    }
-
-    .panduan-list {
-      list-style-position: inside;
-      padding: 0 0.5em;
-      width: 100%;
-    }
-
-    .panduan-list li {
-      margin-bottom: 3px;
-      padding-bottom: 0.5em;
-      border-bottom: 0.5px solid #333;
-      margin-bottom: 1em;
-    }
-
-    .panduan-item {
-      background-color: transparent;
-      border-radius: 10px;
-      padding: 1em 0;
-      text-align: center;
-      /*font-weight: bold;*/
-      color: #222;
-      border-top: 1px solid #ddd; 
-      cursor: pointer;
-    }
-
-    .panduan-item:first-child {
-      border-top: none;
-    }
-
-
-    /* ===== INTERAKTIF BARU CSS ===== */
-    #interaktif {
-      /* Background Oranye terang di sisi kartu */
-      background-color: #ffd66d; 
-      padding: 1.5em; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start; 
-    }
-
-    .interaktif-card {
-      background-color: white;
-      border-radius: 25px; 
-      padding: 1.5em 1em;
-      /* Tepi luar Oranye */
-      border: 15px solid #ffa500; 
-      max-width: 350px; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 90%;
-    }
-
-    .interaktif-title-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .interaktif-back-btn {
-      position: absolute;
-      left: 0;
-      font-size: 2em;
-      /*font-weight: bold;*/
-      color: #222;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    .interaktif-title {
-      font-family: 'Luckiest Guy', cursive;
-      color: #222; 
-      font-size: 1.5em;
-      text-align: center;
-    }
-
-    .interaktif-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .interaktif-item {
-      background-color: white;
-      border-radius: 15px;
-      padding: 10px 15px;
-      /*font-weight: bold;*/
-      color: #222;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-      cursor: pointer;
-    }
-
-    .interaktif-item:hover {
-      transform: scale(1.02);
-    }
-
-    .interaktif-icon {
-      width: 40px;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 15px;
-      border: 3px solid #ffd60a; /* Border kuning */
-    }
-
-    .interaktif-icon img {
-      width: 60%;
-      height: 60%;
-      object-fit: contain;
-    }
-
-    .menu-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5em;
-    }
-
-    .twice {
-      grid-column: span 2;
-      flex-direction: row;
-    }
-
-    .thumbnail {
-      width: 80px;
-    }
-
-    .thumbnail-ss {
-      width: 40px;
-    }
-
-    .thumbnail-fix {
-      height: 80px;
-      width: 54px;
-    }
-
-    #cariTahu {
-      background-color: #6cdd6c;
-      padding: 2em 1.5em;
-      font-weight: bold;
-    }
-
-    .bacaan {
-      /*font-weight: 100;*/
-      width: 90%;
-      background-color: rgba(255,255,255,1);
-      border: 10px solid #6cdd6c;
-      transition: 1s;
-    }
-
-    .bacaan:hover {
-      transform: scale(1.05);
-    }
-
-    .bacaan h2 {
-      margin-bottom: 1em;
-      padding-bottom: 0.5em;
-      border-bottom: 2px dashed #6cdd6c;
-    }
-    .bacaan p {
-      text-indent: 2em;
-      text-align: left;
-      padding: 0.5em;
-      border-bottom: 1px solid #222;
-      margin-bottom: 1em;
-    }
-
-    .bacaan ol {
-      padding: 0.5em;
-      text-align: left;
-    }
-    
-    .bacaan li {
-      padding-bottom: 0.5em;
-      border-bottom: 0.5px solid #333;
-      margin-bottom: 1em;
-    }
-
-    .to-home {
-      box-shadow: 1px 1px 3px #fff;
-    }
-
-    .to-home:hover {
-      border: 2px solid #fff;
-      box-shadow: inset 2px 2px 3px #222;
-    }
-
-    #alat li, #praktik li {
-      line-height: 16px;
-      margin-bottom: 8px;
-    }
-
-    .h2-judul {
-      color: #fff;
-      text-shadow: 2px 2px 4px #222;
-      font-size: 2.0em;
-    }
-
-    /* Judul Form */
-    .form-title {
-      font-size: 1.5em;
-      /*font-weight: bold;*/
-      color: #333;
-      margin-bottom: 20px;
-      text-align: center;
-      border-bottom: 2px solid #ffc107;
-      padding-bottom: 10px;
-    }
-
-    /* Gaya untuk setiap grup input (label + input) */
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    /* Label Input */
-    .form-group label {
-      display: block;
-      /*font-weight: 400;*/
-      margin-bottom: 8px;
-      color: #555;
-      font-size: 0.95em;
-    }
-
-    /* Input Field */
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      border: 2px solid #ddd;
-      border-radius: 10px;
-      box-sizing: border-box; 
-      font-size: 1em;
-      transition: border-color 0.3s;
-    }
-
-    .form-group input:focus {
-      border-color: #ffc107;
-      outline: none;
-    }
-
-    /* Tombol Submit */
-    .submit-button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background-color: #007bff; /* Biru terang */
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 1em;
-      /*font-weight: bold;*/
-      cursor: pointer;
-      margin-top: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s;
-    }
-
-    .submit-button:hover {
-      background-color: #0056b3;
-    }
-
-    /* ===== DATADIRI BARU CSS ===== */
-    #datadiri {
-      background-color: #3da9fc; /* Background hijau */
-      padding: 2em 1.5em 2.5em 1.5em; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start; 
-      font-size: 1em;
-      color: #000;
-    }
-
-    #datadiri h3 {
-      margin: 1em auto;
-      padding: 0.5em 1em;
-      width: 90%;
-      color: #fff;
-      text-align: center;
-      text-shadow: 2px 2px 5px #222;
-    }
-
-    .datadiri-card {
-      width: 90%;
-    }
-
-    .datadiri-card div {
-      background-color: white;
-      border-radius: 20px; 
-      padding: 1em;
-      border: 15px solid #3da9fc; 
-      max-width: 350px; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      transition: 0.5s;
-      margin: 1em auto;
-    }
-
-    .datadiri-card div p {
-      padding-bottom: 0.2em;
-      border-bottom: 1px solid #000;
-      margin-bottom: 0.5em;
-    }
-
-    .datadiri-card div p span {
-      
-    }
-
-
-    .datadiri-card div div {
-      border: 1px solid #3da9fc;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    
-    #datadiri > .to-home2 {
-      background: #6cdd6c;
-      box-shadow: 1px 1px 3px #fff;
-    }
-    
-    #datadiri > .to-home2:hover {
-      border: 2px solid #fff;
-      box-shadow: inset 2px 2px 3px #222;
-    }
-
-    /* Styling untuk Settings  */
-    #settings {
-      background-color: #B0CE88;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5em;
-    }
-
-    #settings label {
-      font-size: 1.1em;
-      padding: 1em;
-      border-radius: 12px;
-      border: 0.5em solid #4C763B;
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1em;
-    }
-
-    #settings label input {
-      width: 25px;
-      aspect-ratio: 1/1;
-    }
-
-    #settings a {
-      color: #fff;
-      text-shadow: 2px 2px 3px #222;
-      text-decoration: none;
-      margin-top: -1.5em;
-      font-size: 0.9em;
-    }
-    
-    #startButton {
-      display: none;
-      margin: 0 auto;
-      background: #222;
-      color: #fff;
-      padding: 3% 5%;
-      transition: 1s;
-    }
-    #startButton:active {
-      transform: scale(1.1);
-    }
-    
-    .img-gif {
-      width: 100%;
-    }
-  </style>
+  }
+
+
+  #detailMateri p {
+    margin: 1em auto 0em auto;
+    width: 90%;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  #detailMateri ul, #detailMateri ol {
+    text-align: left;
+    width: 90%;
+    list-style-position: inside;
+
+  }
+
+  #detailMateri button, .page button {
+    background: #3da9fc;
+    color: white;
+    padding: 0.5em 1.5em; /* Disesuaikan agar tidak terlalu besar */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /*font-weight: bold;*/
+    margin-top: 1em; 
+  }
+
+  .page .menu button {
+    background: #fff;
+    color: #222;
+  }
+
+  /* ===== HALAMAN LAIN (Progress) - BARU ===== */
+  #progress {
+    background-color: #ffd66d; /* Background Kuning/Oranye Terang */
+    padding: 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #progress h2 {
+    display: none; /* Hapus h2 lama */
+  }
+
+  .progress-card {
+    background-color: white;
+    border-radius: 25px;
+    padding: 1.5em 1em;
+    border: 15px solid #ffa500; /* Tepi luar Oranye */
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+  }
+
+  .progress-title-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .progress-title {
+    font-family: 'Luckiest Guy', cursive;
+    color: #222;
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .chart-ring-wrapper {
+    width: 150px; /* Ukuran total chart ring */
+    height: 150px;
+    margin: 1em auto;
+    position: relative;
+  }
+
+  .chart-ring-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .chart-ring-text .count {
+    font-size: 2em;
+    color: #3da9fc; /* Warna biru */
+    line-height: 1;
+  }
+
+  .total-point {
+    margin: 1.5em 0 1em;
+  }
+
+  .total-point .label {
+    font-size: 1em;
+    /*font-weight: bold;*/
+    color: #222;
+    opacity: 0.7;
+  }
+
+  .total-point .value {
+    font-size: 2.5em;
+    color: #ffa500; /* Warna oranye */
+    line-height: 1;
+  }
+
+  .chart-bar-wrapper {
+    width: 90%;
+    margin: 2em auto 1.5em;
+  }
+
+  .badge-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1em;
+  }
+
+  .badge-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ffd60a; /* Contoh border lencana */
+  }
+
+  .badge-item img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+
+  /* ===== PANDUAN BARU CSS ===== */
+  #panduan {
+    background-color: #6cdd6c; /* Background hijau */
+    padding: 1.5em; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    font-weight: bold;
+  }
+
+  #panduan h2 {
+    display: block; /* Hapus h2 lama */
+    color: #fff;
+    text-shadow: 1px 1px 2px #222;
+    width: 90%;
+    size: 0.8em;
+  }
+
+  .panduan-card {
+    background-color: white;
+    border-radius: 20px; 
+    padding: 1em 0.5em;
+    border: 10px solid #6cdd6c; 
+    max-width: 350px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    transition: 0.5s;
+    margin: 10px auto;
+  }
+
+  .panduan-card:hover {
+    transform: scale(1.05);
+  }
+
+  .panduan-card h3 {
+    text-align: center;
+    width: 80%;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 2px dashed #6cdd6c;
+  }
+
+  .panduan-title {
+    font-family: 'Luckiest Guy', cursive;
+    color: #222; 
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+  }
+
+  .panduan-image {
+    width: 120px;
+  }
+
+  .panduan-list {
+    list-style-position: inside;
+    padding: 0 0.5em;
+    width: 100%;
+  }
+
+  .panduan-list li {
+    margin-bottom: 3px;
+    padding-bottom: 0.5em;
+    border-bottom: 0.5px solid #333;
+    margin-bottom: 1em;
+  }
+
+  .panduan-item {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 1em 0;
+    text-align: center;
+    /*font-weight: bold;*/
+    color: #222;
+    border-top: 1px solid #ddd; 
+    cursor: pointer;
+  }
+
+  .panduan-item:first-child {
+    border-top: none;
+  }
+
+
+  /* ===== INTERAKTIF BARU CSS ===== */
+  #interaktif {
+    /* Background Oranye terang di sisi kartu */
+    background-color: #ffd66d; 
+    padding: 1.5em; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+  }
+
+  .interaktif-card {
+    background-color: white;
+    border-radius: 25px; 
+    padding: 1.5em 1em;
+    /* Tepi luar Oranye */
+    border: 15px solid #ffa500; 
+    max-width: 350px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+  }
+
+  .interaktif-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .interaktif-back-btn {
+    position: absolute;
+    left: 0;
+    font-size: 2em;
+    /*font-weight: bold;*/
+    color: #222;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  .interaktif-title {
+    font-family: 'Luckiest Guy', cursive;
+    color: #222; 
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .interaktif-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .interaktif-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    /*font-weight: bold;*/
+    color: #222;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+
+  .interaktif-item:hover {
+    transform: scale(1.02);
+  }
+
+  .interaktif-icon {
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border: 3px solid #ffd60a; /* Border kuning */
+  }
+
+  .interaktif-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .twice {
+    grid-column: span 2;
+    flex-direction: row;
+  }
+
+  .thumbnail {
+    width: 80px;
+  }
+
+  .thumbnail-ss {
+    width: 40px;
+  }
+
+  .thumbnail-fix {
+    height: 80px;
+    width: 54px;
+  }
+
+  #cariTahu {
+    background-color: #6cdd6c;
+    padding: 2em 1.5em;
+    font-weight: bold;
+  }
+
+  .bacaan {
+    /*font-weight: 100;*/
+    width: 90%;
+    background-color: rgba(255,255,255,1);
+    border: 10px solid #6cdd6c;
+    transition: 1s;
+  }
+
+  .bacaan:hover {
+    transform: scale(1.05);
+  }
+
+  .bacaan h2 {
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px dashed #6cdd6c;
+  }
+  .bacaan p {
+    text-indent: 2em;
+    text-align: left;
+    padding: 0.5em;
+    border-bottom: 1px solid #222;
+    margin-bottom: 1em;
+  }
+
+  .bacaan ol {
+    padding: 0.5em;
+    text-align: left;
+  }
+
+  .bacaan li {
+    padding-bottom: 0.5em;
+    border-bottom: 0.5px solid #333;
+    margin-bottom: 1em;
+  }
+
+  .to-home {
+    box-shadow: 1px 1px 3px #fff;
+  }
+
+  .to-home:hover {
+    border: 2px solid #fff;
+    box-shadow: inset 2px 2px 3px #222;
+  }
+
+  #alat li, #praktik li {
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+
+  .h2-judul {
+    color: #fff;
+    text-shadow: 2px 2px 4px #222;
+    font-size: 2.0em;
+  }
+
+  /* Judul Form */
+  .form-title {
+    font-size: 1.5em;
+    /*font-weight: bold;*/
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+  }
+
+  /* Gaya untuk setiap grup input (label + input) */
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  /* Label Input */
+  .form-group label {
+    display: block;
+    /*font-weight: 400;*/
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.95em;
+  }
+
+  /* Input Field */
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    font-size: 1em;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus {
+    border-color: #ffc107;
+    outline: none;
+  }
+
+  /* Tombol Submit */
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Biru terang */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    /*font-weight: bold;*/
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* ===== DATADIRI BARU CSS ===== */
+  #datadiri {
+    background-color: #3da9fc; /* Background hijau */
+    padding: 2em 1.5em 2.5em 1.5em; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    font-size: 1em;
+    color: #000;
+  }
+
+  #datadiri h3 {
+    margin: 1em auto;
+    padding: 0.5em 1em;
+    width: 90%;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 5px #222;
+  }
+
+  .datadiri-card {
+    width: 90%;
+  }
+
+  .datadiri-card div {
+    background-color: white;
+    border-radius: 20px; 
+    padding: 1em;
+    border: 15px solid #3da9fc; 
+    max-width: 350px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    margin: 1em auto;
+  }
+
+  .datadiri-card div p {
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #000;
+    margin-bottom: 0.5em;
+  }
+
+  .datadiri-card div p span {
+
+  }
+
+
+  .datadiri-card div div {
+    border: 1px solid #3da9fc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #datadiri > .to-home2 {
+    background: #6cdd6c;
+    box-shadow: 1px 1px 3px #fff;
+  }
+
+  #datadiri > .to-home2:hover {
+    border: 2px solid #fff;
+    box-shadow: inset 2px 2px 3px #222;
+  }
+
+  /* Styling untuk Settings  */
+  #settings {
+    background-color: #B0CE88;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  #settings label {
+    font-size: 1.1em;
+    padding: 1em;
+    border-radius: 12px;
+    border: 0.5em solid #4C763B;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #settings label input {
+    width: 25px;
+    aspect-ratio: 1/1;
+  }
+
+  #settings a {
+    color: #fff;
+    text-shadow: 2px 2px 3px #222;
+    text-decoration: none;
+    margin-top: -1.5em;
+    font-size: 0.9em;
+  }
+
+  #startButton {
+    display: none;
+    margin: 0 auto;
+    background: #222;
+    color: #fff;
+    padding: 3% 5%;
+    transition: 1s;
+  }
+  #startButton:active {
+    transform: scale(1.1);
+  }
+
+  .img-gif {
+    width: 100%;
+  }
+
+  #export {
+    border: 0.1em solid #999;
+    border-radius: 8px;
+    padding: 0.25em;
+    margin-top: 0.5em;
+  }
+  #export > a {
+    color: #3da9fc;
+    text-decoration: none;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  #export > a:hover {
+    color: #fff;
+    background: #3da9fc;
+  }
+</style>
 </head>
 <body>
   <div id="app-wrapper">
@@ -1203,7 +1222,7 @@
         <p class="subtitle">Aktivitas Jasmani untuk Anak 10-12 Tahun</p>
       </div>
       <div class="hero">
-        <img class="img-gif" src="images/run_away.gif" alt="Running boy" />
+        <img class="img-gif" src="./assets/run_away.gif" alt="Running boy" />
         <h2 id="sapaanDashboard">Ayo Bergerak!</h2>
       </div>
       <div class="menu">
@@ -1242,9 +1261,9 @@
       <div class="card bacaan">
         <h2>🏃 Apa Itu <strong>Aktivitas Jasmani</strong> ?</h2>
         <p><strong>Aktivitas jasmani</strong> adalah bentuk kegiatan yang melibatkan gerakan tubuh 
-          dan membutuhkan energi (WHO, 2020). </p>
-          <p>Dalam konteks pendidikan, <strong>aktivitas jasmani</strong> tidak hanya bertujuan untuk melatih fisik, tetapi juga untuk mengembangkan keterampilan motorik, kemampuan sosial, serta membangun kebiasaan hidup sehat sejak dini.</p>
-        </div>
+        dan membutuhkan energi (WHO, 2020). </p>
+        <p>Dalam konteks pendidikan, <strong>aktivitas jasmani</strong> tidak hanya bertujuan untuk melatih fisik, tetapi juga untuk mengembangkan keterampilan motorik, kemampuan sosial, serta membangun kebiasaan hidup sehat sejak dini.</p>
+      </div>
 
      <!--    <div class="card bacaan">
           <h2>Karakteristik Anak Usia 10-12 Tahun</h2>
@@ -1391,7 +1410,7 @@
             </h2>
 
             <form id="aktivitasGerakForm">
-              
+
               <div class="form-group">
                 <label for="timestamp">Masukan tanggal</label>
                 <input type="date" id="timestamp" placeholder="Pilih tanggal" required/>
@@ -1456,7 +1475,7 @@
               <canvas id="pointBarChart"></canvas>
             </div>
 
-            <div class="badge-list">
+            <div class="badge-list" id="showBadge">
               <!-- <div class="badge-item" style="border-color: #3da9fc;">
                <img src="assets/star-icon.png" alt="Lencana 1"> 
              </div>
@@ -1466,6 +1485,9 @@
              <div class="badge-item" style="border-color: #6cdd6c;">
                <img src="assets/quiz-icon.png" alt="Lencana 3">
              </div> -->
+           </div>
+           <div id="export">
+             <a href="javascript:void(0)" id="exportBtn">Rekap data ke Excel</a>
            </div>
 
          </div>
@@ -1541,8 +1563,8 @@
           <!-- <h3 id="dataNama">Nama Siswa</h3> -->
           <div>
             <p>Nama : <span id="dataNama">nama</span>
-            <p>Kelas : <span id="dataKelas">3</span></p>
-            <p>Umur : <span id="dataUmur">10</span></p>
+              <p>Kelas : <span id="dataKelas">3</span></p>
+              <p>Umur : <span id="dataUmur">10</span></p>
             <!--<p>Sekolah : <span id="dataSekolah">SDN</span></p>
             <p>Hobi : <span id="dataHobi">hobi</span></p>-->
           </div>
@@ -1581,11 +1603,11 @@
       // start 
 
       //window.addEventListener("DOMContentloaded", () => {
-        setTimeout(() => {
+      setTimeout(() => {
           //showPage("dashboard");
-          document.getElementById('startButton').style.display="block";
+        document.getElementById('startButton').style.display="block";
           //openMateri(0)
-        }, 3000);
+      }, 3000);
       //});
 
     // Dummy data
@@ -1676,7 +1698,27 @@
           //tmp = JSON.parse(tmp);
           tmp = tmp.join('');
           document.getElementById('penghargaan').textContent = tmp;
+          document.getElementById('showBadge').textContent = tmp;
         }
+      }
+
+      function showExport(){
+        let exportDiv = document.getElementById('export');
+        let exportBtn = document.getElementById('exportBtn');
+        let url = "https://akucoba231.github.io/FunMoveReport/index.html?data="
+        // update data progress
+        getDataProgress(); // data akan disimpan ke dataProgress
+        let tmp = dataProgress // array
+        tmp = JSON.stringify(tmp) // string json
+        tmp = encodeURI(tmp) // encode URI untuk disematkan ke url
+
+        exportBtn.href = url + tmp;
+        exportBtn.target = "_blank";
+
+        exportBtn.onclick = (e)=>{
+          alert('Kamu akan dialihkan ke halaman export');
+        }
+
       }
 
       function initProgressCharts() {
@@ -1703,6 +1745,10 @@
         const totalPoints = totalActivity; //Math.round(parseInt(totalActivity) / parseInt(currentActivity));
         
         updateBadge(totalActivity);
+        if(dataProgress.length > 0) {
+          showExport();
+          writeBadge();
+        }
 
         // Update teks total
         document.getElementById('currentActivityCount').textContent = `${currentActivity} kali set`;
@@ -1735,7 +1781,7 @@
         pointBarChart = new Chart(barCtx, {
           type: 'bar',
           data: {
-            labels: ['pushup', 'situp', 'jumpingjack', 'jogging', 'lemparbola'],
+            labels: [pushup + ' | pushup', situp + ' | situp', jumpingjack + ' | jumpingjack', jogging + ' | jogging', lemparbola + ' | lemparbola'],
             datasets: [{
               label: 'Poin',
               data: [pushup, situp, jumpingjack, jogging, lemparbola], 
@@ -1896,51 +1942,51 @@
         
         let aktifMat = document.querySelector('.materi-item');
         aktifMat.classList.add('aktif')
-items = document.querySelectorAll('.materi-item');
+        items = document.querySelectorAll('.materi-item');
 //console.log(items)
       }
       
-let current = 0;
-let items = []
+      let current = 0;
+      let items = []
 //console.log(items)
 
-function updateMateri(newIndex, arah = 'kanan') {
-  if (newIndex < 0 || newIndex >= items.length) return;
+      function updateMateri(newIndex, arah = 'kanan') {
+        if (newIndex < 0 || newIndex >= items.length) return;
 
-  const aktif = items[current];
-  const berikut = items[newIndex];
+        const aktif = items[current];
+        const berikut = items[newIndex];
 
   // arah animasi
-  aktif.style.transformOrigin = arah === 'kanan' ? 'left' : 'right';
-  berikut.style.transformOrigin = arah === 'kanan' ? 'right' : 'left';
+        aktif.style.transformOrigin = arah === 'kanan' ? 'left' : 'right';
+        berikut.style.transformOrigin = arah === 'kanan' ? 'right' : 'left';
 
-  aktif.classList.remove('aktif');
-  aktif.style.transform = arah === 'kanan' ? 'rotateY(-90deg)' : 'rotateY(90deg)';
-  aktif.style.opacity = 0;
+        aktif.classList.remove('aktif');
+        aktif.style.transform = arah === 'kanan' ? 'rotateY(-90deg)' : 'rotateY(90deg)';
+        aktif.style.opacity = 0;
 
-  berikut.classList.add('aktif');
-  berikut.style.transform = 'rotateY(0deg)';
-  berikut.style.opacity = 1;
+        berikut.classList.add('aktif');
+        berikut.style.transform = 'rotateY(0deg)';
+        berikut.style.opacity = 1;
 
-  current = newIndex;
-}
+        current = newIndex;
+      }
 
-function sebelumnya() {
-  updateMateri(current - 1, 'kiri');
-}
+      function sebelumnya() {
+        updateMateri(current - 1, 'kiri');
+      }
 
-function selanjutnya() {
-  updateMateri(current + 1, 'kanan');
-}
+      function selanjutnya() {
+        updateMateri(current + 1, 'kanan');
+      }
 
-function jumpMateri(id){
-  for(let i = 0; i < id; ++i){
-    selanjutnya();
-  }
-}
+      function jumpMateri(id){
+        for(let i = 0; i < id; ++i){
+          selanjutnya();
+        }
+      }
 
-let tmpVideo;
-let tmpAktivitas;
+      let tmpVideo;
+      let tmpAktivitas;
 
       function openMateri(id) {
         tmpAktivitas = id;
@@ -1979,10 +2025,10 @@ let tmpAktivitas;
           stopMusik();
           //musik.click();
         } else {
-          
+
         }
       });
-        
+
 
   // Ketika vidWrap dijeda
       vidWrap.addEventListener('pause', () => {
@@ -2113,22 +2159,22 @@ let tmpAktivitas;
         "Kamis",
         "Jum'at",
         "Sabtu"
-        ];
-        
+      ];
+
         let d = new Date(t); //date
         document.getElementById("hariTime").value = day[d.getDay()]
-    }
+      }
 
     // end of game activity
 
     // start of datadiri
 
-    function getDataDiri(){
-      let tmp = localStorage.getItem(profile);
-      return JSON.parse(tmp);
-    }
+      function getDataDiri(){
+        let tmp = localStorage.getItem(profile);
+        return JSON.parse(tmp);
+      }
 
-    function initDataDiri(){
+      function initDataDiri(){
       let diri = getDataDiri(); //nama, umur, kelas, sekolah, hobi
       //console.log(diri);
       //let el = ["Nama","Umur","Kelas","Sekolah","Hobi"];
