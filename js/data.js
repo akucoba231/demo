@@ -16,7 +16,7 @@ const new1 = [
       "Setelah sampai batas yang ditandai dengan cone anak bergantian  bertukar posisi.",
       "Anak kembali lagi sampai ke garis start."
     ],
-    video: baseVideo + "Old_tarik_bajai.mp4",
+    video: baseVideo + "tarik_bajai.mp4",
   },
   {
     aktivitas: "Tongkat Sang Raja",
@@ -32,7 +32,7 @@ const new1 = [
       "Waktu yang diberikan selama 60 detik.",
       "Setelah waktu selesai ditandai dengan bunyi pluit anak yang menghitung melaporkan jumlah berapa kali temannya mampu memegang cone tersebut, setelah itu berganti posisi."
     ],
-    video: baseVideo + "Old_tongkat_sang_raja.mp4",
+    video: baseVideo + "tongkat_sang_raja.mp4",
   },
   {
     aktivitas: "ADUK",
@@ -195,7 +195,7 @@ const new3 = [
       "Sampai semua cone berpindah semua ke orang terakhir.",
       "Kelompok yang paling dahulu menyelesaikan maka kelopmpok tersebut pemenangnya."
     ],
-    video: baseVideo + "Old_si_berani.mp4",
+    video: baseVideo + "si_berani.mp4",
   },
   {
     aktivitas: "Dragon Walk",
