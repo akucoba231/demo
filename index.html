@@ -7,6 +7,7 @@
   <title>Fun Move</title>
   <link rel="preload" as="image" href="assets/run.jpg"> 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script> 
+
   <style>
     /* Global Reset & Viewport Fix */
     @font-face {
@@ -500,6 +501,7 @@
     width: 90%;
     border-left: 5px solid #2196f3;
   }
+
   #detailMateri > video {
     border: none;
   }
@@ -633,7 +635,7 @@
   .progress-card {
     background-color: white;
     border-radius: 25px;
-    padding: 1.5em 1em;
+    padding: 1.5em 0.5em;
     border: 15px solid #ffa500; /* Tepi luar Oranye */
     max-width: 350px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -1140,6 +1142,7 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
+    width: 70%;
   }
 
   #settings label input {
@@ -1153,6 +1156,26 @@
     text-decoration: none;
     margin-top: -1.5em;
     font-size: 0.9em;
+  }
+
+  .danger {
+    width: 70%;
+    border: 0.25em dashed red;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+  }
+
+  .danger > button {
+    margin: 0;
+    background: red;
+    transition: 0.5s;
+  }
+
+  .danger > button:hover {
+    border: 0.25em solid #eee;
   }
 
   #startButton {
@@ -1176,6 +1199,7 @@
     border-radius: 8px;
     padding: 0.25em;
     margin-top: 0.5em;
+    display: none;
   }
   #export > a {
     color: #3da9fc;
@@ -1189,6 +1213,21 @@
     color: #fff;
     background: #3da9fc;
   }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background: inherit;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    border: 0.2em solid #fff;
+    border-radius: 12px;
+  }
+
+
 </style>
 </head>
 <body>
@@ -1257,6 +1296,11 @@
           <img class="thumbnail" style="width: 30px; aspect-ratio: 1/1;" src="assets/settings.png" alt="">
           Pengaturan
         </button>
+      </div>
+      <div class="footer">
+        <footer>
+          <p>FunMove oleh Abdullatif Sidiq, M. Pd &copy; 2025</p>
+        </footer>
       </div>
     </section>
 
@@ -1506,7 +1550,7 @@
           <h3>🏃‍♀️ Menu <strong>Aktivitas</strong></h3>
           <ul class="panduan-list">
             <li>Menu ini berisi materi aktivitas jasmani.</li>
-            <li>Setelah masuk ke menu <b>aktivitas</b>, akan tampil 40 materi aktivitas jasmani.</li>
+            <li>Setelah masuk ke menu <b>aktivitas</b>, akan tampil 20 materi aktivitas jasmani.</li>
             <li>Memilih salah satu aktivitas akan menampilkan rincian materinya.</li>
           </ul>
         </div>
@@ -1515,7 +1559,7 @@
           <h3>🏆 Menu <strong>Permainan Aktivitas</strong></h3>
           <ul class="panduan-list">
             <li>Menu ini berisi permainan atau kegiatan yang dapat dikerjakan di rumah.</li>
-            <li>Di dalamnya ada <strong>Ayo Bergerak di Rumah</strong>, yang perlu dikerjakan di rumah.</li>
+            <li>Di dalamnya ada <strong>"Ayo Bergerak di Rumah"</strong>, yang perlu dikerjakan di rumah.</li>
             <li>Kerjakan tugas sesuai panduan, dan jangan lupa masukan hasilnya pada kolom "<strong>isi hasilnya</strong>"</li>
             <li>Lalu tekan tombol "<strong>Kirim hasil aktivitas</strong>" untuk menyimpan hasil tugas.</li>
             <li>Hasil ini nantinya akan diproses dan ditampilkan di menu <em>Pencapaian</em></li>
@@ -1539,7 +1583,7 @@
             <li>Menu ini berisi pencapaian aktivitas jasmani siswa.</li>
             <li>Siswa yang telah menyimpan hasil <em>Permainan Aktivitas</em>, akan melihat hasil pencapaiannya di sini.</li>
             <li>Diagram batang akan merepresentasikan berapa banyak rincian kegiatan siswa.</li>
-            <li>Diagram lingkaran akan merepresentasikan berapa kali siswa melakukan satu set <em>Game Activity</em>.</li>
+            <li>Diagram lingkaran akan merepresentasikan berapa kali siswa melakukan satu set <em>Permainan Aktivitas</em>.</li>
           </ul>
         </div>
 
@@ -1555,6 +1599,10 @@
           <ul class="panduan-list">
             <li>Menu ini berisi pengaturan suara latar dan suara efek.</li>
             <li>Pengaturan memuat apakah suara akan diaktifkan atau tidak.</li>
+            <li>Terdapat menu untuk <em>"Reset Data"</em> digunakan untuk menghapus data diri dan data pencapaian.</li>
+            <li>Pastikan data pencapaian sudah direkap sebelumnya.</li>
+            <li>Pesan konfirmasi akan muncul sebagai peringatan sebelum menghapus data seutuhnya.</li>
+            <li>Pesan konfirmasi akan muncul 2 kali untuk keamanan.</li>
           </ul>
         </div>
         <button class="to-home" onclick="showPage('dashboard')">Kembali ke Dashboard</button>
@@ -1590,6 +1638,10 @@
           <input type="checkbox" id="musiklatar" checked /> Aktifkan Musik Latar
         </label>
         <a href="https://pixabay.com/users/anaknusantara115-25146881/">Music by anaknusantara115, pixabay</a>
+
+        <div class="danger">
+          <button onclick="resetAllData()">Reset Data</button>
+        </div>
       <!-- <label>
         <input type="checkbox" id="musiksfx" /> Aktifkan Suara Efek
       </label> -->
@@ -1602,6 +1654,32 @@
       let profile = "funProfil"; //untuk simpan profile
       let funBadge = "funBadge"; //untuk lencana
       let funDataProgress = "funData"; //untuk dataprogress
+
+      // untuk reset semua data 
+
+      function resetAllData(){
+        let keys = [profile, funBadge, funDataProgress];
+
+        if(confirm("Semua data diri dan pencapaian akan dihapus, lanjutkan ?")){
+          if(confirm("Apakah kamu yakin ?")){
+              keys.forEach((item)=>{
+                localStorage.removeItem(item);
+              })
+              dataProgress = []; // untuk reset
+              // menghapus badge
+              document.getElementById('penghargaan').textContent = "";
+              document.getElementById('showBadge').textContent = "";
+
+              alert("Data telah dihapus silakan kembali ke dashboard");
+          }
+          else {
+            // do nothing
+          }
+        }
+        else {
+          // do nothing
+        }
+      }
 
       // start 
 
@@ -1707,6 +1785,7 @@
 
       function showExport(){
         let exportDiv = document.getElementById('export');
+        exportDiv.style.display = "block";
         let exportBtn = document.getElementById('exportBtn');
         let url = "https://akucoba231.github.io/FunMoveReport/index.html?data="
         // update data progress
@@ -1730,7 +1809,7 @@
         if (pointBarChart) pointBarChart.destroy();
         
         getDataProgress();
-        dataProgress // array harusnya tidak kosong
+        //dataProgress // array harusnya tidak kosong
         let keys = ['timestamp','pushup','situp','jumpingjack','lemparbola'];
 
         let pushup = hitungTotal('pushup');
@@ -1784,7 +1863,7 @@
         pointBarChart = new Chart(barCtx, {
           type: 'bar',
           data: {
-            labels: [pushup + ' | pushup', situp + ' | situp', jumpingjack + ' | jumpingjack', jogging + ' | jogging', lemparbola + ' | lemparbola'],
+            labels: ['pushup','situp','jumpingjack','jogging','lemparbola'],
             datasets: [{
               label: 'Poin',
               data: [pushup, situp, jumpingjack, jogging, lemparbola], 
@@ -1835,7 +1914,7 @@
         toTop(id);
         if (id === "dashboard") {
           let tmp = getProfile();
-          
+          tmp = tmp.nama
           //document.getElementById("sapaanDashboard").innerHTML = `Halo ${tmp}, <br /> ayo bergerak!`;
           document.getElementById("sapaanDashboard").textContent = `Ayo bergerak!`;
 
@@ -1922,7 +2001,7 @@
         if(localStorage.getItem(profile) != undefined){
           let tmp = localStorage.getItem(profile);
           tmp = JSON.parse(tmp);
-          return tmp.nama;
+          return tmp;
         }
         else {
           return "";
@@ -2108,15 +2187,17 @@
       // ada tambahan waktu
       let input = ['timestamp','pushup','situp','jumpingjack','jogging','lemparbola'];
       let data = {}
-      let profil = getProfile(); // harusnya sudah ada
+      let profil = getProfile(); // harusnya sudah ada (array : nama, kelas, umur)
       if(profil == ""){
         alert('Silakan isi data diri dulu ya');
         showPage('main')
       }
       //console.log(profil)
 
-      data["nama"] = profil;
-
+      data["nama"] = profil.nama;
+      data["kelas"] = profil.kelas;
+      data["umur"] = profil.umur;
+      // sini bos
       // setting penilaian ada di sini
       input.forEach((item)=>{
         let value = document.getElementById(item).value
