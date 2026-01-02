@@ -1,5 +1,5 @@
 let baseImage = "./imagesNew/";
-let baseVideo = "./videoCompressed/";
+let baseVideo = "./videoCompressedNew/";
 
 const new1 = [
   {
